@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AJTechnology - Robótica Educativa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="assets/img/logo-ajtechnology.png" alt="Logo AJTechnology" class="logo" />
+      <div>
+        <h1>AJTechnology</h1>
+        <p>Robótica Educativa y Tecnología para el Futuro</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#robots">Robots</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="robots">
+      <h2>Galería de Robots</h2>
+      <div class="galeria">
+        <img src="assets/img/robot1.png" alt="Robot Seguidor de Línea" />
+        <img src="assets/img/robot2.png" alt="Robot con brazo articulado" />
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos Destacados</h2>
+      <button onclick="mostrarProyectos()">Mostrar/Ocultar Proyectos</button>
+      <div id="listaProyectos" class="proyectos oculto">
+        <article class="tarjeta">
+          <img src="assets/img/proyecto1.jpeg" alt="Proyecto agrícola" />
+          <h3>Riego Automatizado</h3>
+          <p>Un sistema controlado con Arduino que permite regar cultivos de forma inteligente.</p>
+        </article>
+        <!-- Agrega más proyectos aquí si lo deseas -->
+      </div>
+    </section>
+
+    <section>
+      <h2>Cursos Disponibles</h2>
+      <table>
+        <thead>
+          <tr><th>Curso</th><th>Duración</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Robótica Básica</td><td>4 semanas</td></tr>
+          <tr><td>Diseño 3D</td><td>3 semanas</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <form>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required /><br>
+
+        <label for="correo">Correo:</label><br>
+        <input type="email" id="correo" name="correo" required /><br>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AJTechnology - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

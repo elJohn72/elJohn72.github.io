@@ -1,0 +1,102 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+header {
+  background-color: #004080;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: #004080;
+}
+
+.galeria {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galeria img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px #ccc;
+}
+
+.tarjeta {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #aaa;
+  padding: 10px;
+}
+
+form {
+  background-color: #e0ecff;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+form input, form button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+footer {
+  background-color: #00264d;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.oculto {
+  display: none;
+}
