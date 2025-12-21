@@ -1,4 +1,8 @@
-function mostrarProyectos() {
-  const proyectos = document.getElementById("listaProyectos");
-  proyectos.classList.toggle("oculto");
-}
+// script.js
+
+// Mensaje simple al enviar el formulario
+document.querySelector('form')?.addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('¡Gracias por contactarnos!');
+  this.reset();
+});
