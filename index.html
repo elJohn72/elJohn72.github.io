@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoGrow - Dashboard Hidropónico</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoGrow - Torre Hidropónica</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
@@ -12,34 +12,38 @@
     <p>Monitoreo visual de tu sistema inteligente</p>
   </header>
 
-  <section class="gallery">
-    <img src="assets/img1.png" alt="Torre con plantas">
-    <img src="assets/img2.png" alt="Estructura sin plantas">
-    <img src="assets/img3.png" alt="Torre con lechugas">
-  </section>
+  <nav class="image-selector">
+    <img src="assets/img1.png" alt="Torre con plantas" />
+    <img src="assets/img2.png" alt="Estructura sin plantas" />
+    <img src="assets/img3.png" alt="Torre con lechugas" />
+  </nav>
 
-  <section class="status">
-    <div class="card">
+  <main class="dashboard">
+    <section class="card">
       <h2>💧 Nivel de Agua</h2>
-      <p id="waterLevel">78%</p>
-    </div>
-    <div class="card">
+      <p>78%</p>
+    </section>
+
+    <section class="card">
       <h2>🌡️ Temperatura</h2>
-      <p id="temperature">22°C</p>
-    </div>
-    <div class="card">
+      <p>22°C</p>
+    </section>
+
+    <section class="card">
       <h2>🌿 Nutrientes</h2>
-      <p id="nutrients">65%</p>
-    </div>
-    <div class="card">
+      <p>65%</p>
+    </section>
+
+    <section class="card">
       <h2>💡 Iluminación</h2>
-      <p id="light">85%</p>
-    </div>
-    <div class="card">
-      <h2>⚗️ pH</h2>
-      <p id="ph">6.3</p>
-    </div>
-  </section>
+      <p>85%</p>
+    </section>
+
+    <section class="card">
+      <h2>🧪 pH</h2>
+      <p>6.3</p>
+    </section>
+  </main>
 
   <footer>
     <p>EcoGrow © 2026 - Conectando la naturaleza con la tecnología</p>
