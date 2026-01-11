@@ -1,4 +1,3 @@
-// Simulación de actualización dinámica cada 5 segundos
 function actualizarDatos() {
   document.getElementById("waterLevel").textContent = `${Math.floor(Math.random() * 21) + 70}%`;
   document.getElementById("temperature").textContent = `${Math.floor(Math.random() * 6) + 20}°C`;
