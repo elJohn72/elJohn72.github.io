@@ -1,119 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AJTechnology - Robótica Educativa</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoGrow - Dashboard Hidropónico</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- Navbar Bootstrap -->
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">AJTechnology</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#robots">Robots</a></li>
-          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Encabezado -->
-  <header class="text-center p-5 bg-light">
-    <img src="assets/img/logo-ajtechnology.png" alt="Logo AJTechnology" class="img-fluid logo">
-    <h1>AJTechnology</h1>
-    <p>Robótica Educativa y Tecnología para el Futuro</p>
+  <header>
+    <h1>🌱 EcoGrow - Torre Hidropónica</h1>
+    <p>Monitoreo visual de tu sistema inteligente</p>
   </header>
 
-  <!-- Galería de Robots -->
-  <section id="robots" class="container my-5">
-    <h2 class="text-center mb-4">Galería de Robots</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <img src="assets/img/robot1.png" alt="Robot Seguidor de Línea" class="img-fluid rounded shadow">
-      </div>
-      <div class="col-md-6">
-        <img src="assets/img/robot2.png" alt="Robot con brazo articulado" class="img-fluid rounded shadow">
-      </div>
+  <section class="gallery">
+    <img src="assets/img1.png" alt="Torre con plantas">
+    <img src="assets/img2.png" alt="Estructura sin plantas">
+    <img src="assets/img3.png" alt="Torre con lechugas">
+  </section>
+
+  <section class="status">
+    <div class="card">
+      <h2>💧 Nivel de Agua</h2>
+      <p id="waterLevel">78%</p>
+    </div>
+    <div class="card">
+      <h2>🌡️ Temperatura</h2>
+      <p id="temperature">22°C</p>
+    </div>
+    <div class="card">
+      <h2>🌿 Nutrientes</h2>
+      <p id="nutrients">65%</p>
+    </div>
+    <div class="card">
+      <h2>💡 Iluminación</h2>
+      <p id="light">85%</p>
+    </div>
+    <div class="card">
+      <h2>⚗️ pH</h2>
+      <p id="ph">6.3</p>
     </div>
   </section>
 
-  <!-- Proyectos con Collapse -->
-  <section id="proyectos" class="container my-5">
-    <h2 class="text-center">Proyectos Destacados</h2>
-    <p class="text-center">
-      <a class="btn btn-secondary" data-bs-toggle="collapse" href="#listaProyectos">Mostrar Proyectos</a>
-    </p>
-    <div class="collapse" id="listaProyectos">
-      <div class="card card-body">
-        <div class="card mb-3">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="assets/img/proyecto1.jpeg" class="img-fluid rounded-start" alt="Proyecto Agrícola">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Riego Automatizado</h5>
-                <p class="card-text">Sistema con Arduino que permite regar cultivos de forma inteligente.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Cursos -->
-  <section class="container my-5">
-    <h2 class="text-center">Cursos Disponibles</h2>
-    <table class="table table-bordered">
-      <thead class="table-light">
-        <tr><th>Curso</th><th>Duración</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Robótica Básica</td><td>4 semanas</td></tr>
-        <tr><td>Diseño 3D</td><td>3 semanas</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- Formulario de Contacto -->
-  <section id="contacto" class="container my-5">
-    <h2 class="text-center">Contáctanos</h2>
-    <form>
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre:</label>
-        <input type="text" class="form-control" id="nombre" required />
-      </div>
-      <div class="mb-3">
-        <label for="correo" class="form-label">Correo:</label>
-        <input type="email" class="form-control" id="correo" required />
-      </div>
-      <div class="mb-3">
-        <label for="comentario" class="form-label">Comentarios:</label>
-        <textarea class="form-control" id="comentario" rows="3"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-light text-center p-3">
-    <p>&copy; 2025 AJTechnology - Todos los derechos reservados</p>
+  <footer>
+    <p>EcoGrow © 2026 - Conectando la naturaleza con la tecnología</p>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

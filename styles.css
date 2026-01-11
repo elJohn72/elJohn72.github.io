@@ -1,46 +1,64 @@
-/* Estilos personalizados para AJTechnology */
-
 body {
   font-family: 'Segoe UI', sans-serif;
+  background-color: #f4fdf5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #2e7d32;
 }
 
-/* Botón con color personalizado */
-.btn-primary {
-  background-color: #ff5733;
-  border: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+header {
+  background-color: #c8e6c9;
+  padding: 20px;
+  border-bottom: 2px solid #81c784;
 }
 
-.btn-primary:hover {
-  background-color: #c70039;
-  transform: scale(1.05);
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.gallery img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .card {
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: #e8f5e9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 180px;
+  transition: transform 0.2s;
 }
 
-/* Imagen logo */
-header img.logo {
-  max-width: 150px;
+.card:hover {
+  transform: scale(1.05);
 }
 
-/* Media Query para pantallas pequeñas */
-@media (max-width: 600px) {
-  body {
-    background-color: #fceae8;
-  }
+.card h2 {
+  margin-bottom: 10px;
+  color: #1b5e20;
+}
 
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .btn-primary {
-    width: 100%;
-  }
-
-  nav.navbar {
-    text-align: center;
-  }
+footer {
+  background-color: #c8e6c9;
+  padding: 15px;
+  font-size: 14px;
+  color: #4caf50;
+  margin-top: 20px;
 }
