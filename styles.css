@@ -7,59 +7,93 @@ body {
   color: #2e7d32;
 }
 
-header {
-  background-color: #c8e6c9;
-  padding: 20px;
-  border-bottom: 2px solid #81c784;
-}
-
+/* -------------------------
+   Estilos para Galería de Imágenes
+------------------------- */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
-  max-width: 1200px;
-  margin: auto;
+  margin: 20px 0;
 }
 
 .gallery img {
-  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
 }
 
 .gallery img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 8px 16px rgba(46, 125, 50, 0.4);
+  filter: brightness(1.1);
 }
 
+/* -------------------------
+   Estilos para Tarjetas de Estado
+------------------------- */
 .status {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 20px;
+  margin: 20px 0;
 }
 
 .card {
-  background-color: #e8f5e9;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
   padding: 20px;
-  width: 180px;
-  transition: transform 0.2s;
+  min-width: 150px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 8px 16px rgba(46, 125, 50, 0.3);
+  background-color: #f1f8f4;
+  border-color: #2e7d32;
 }
 
 .card h2 {
-  margin-bottom: 10px;
-  color: #1b5e20;
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header p {
+  margin: 10px 0 0 0;
+  font-size: 1.1em;
 }
 
 footer {
@@ -68,4 +102,60 @@ footer {
   font-size: 14px;
   color: #4caf50;
   margin-top: 20px;
+}
+
+/* -------------------------
+   Estilos para Formulario de Registro
+------------------------- */
+.form-section {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-section input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+.form-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#submitBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }

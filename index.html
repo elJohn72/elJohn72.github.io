@@ -41,6 +41,47 @@
     </div>
   </section>
 
+  <!-- NUEVO: Formulario con validaciones dinámicas -->
+  <section class="form-section">
+    <h2>Formulario de Registro</h2>
+    <form id="registroForm">
+      <label>
+        Nombre:
+        <input type="text" id="nombre" required />
+        <span class="error" id="error-nombre"></span>
+      </label>
+
+      <label>
+        Correo electrónico:
+        <input type="email" id="correo" required />
+        <span class="error" id="error-correo"></span>
+      </label>
+
+      <label>
+        Contraseña:
+        <input type="password" id="password" required />
+        <span class="error" id="error-password"></span>
+      </label>
+
+      <label>
+        Confirmar Contraseña:
+        <input type="password" id="confirmPassword" required />
+        <span class="error" id="error-confirm"></span>
+      </label>
+
+      <label>
+        Edad:
+        <input type="number" id="edad" required />
+        <span class="error" id="error-edad"></span>
+      </label>
+
+      <div class="form-buttons">
+        <button type="submit" id="submitBtn" disabled>Enviar</button>
+        <button type="reset">Reiniciar</button>
+      </div>
+    </form>
+  </section>
+
   <footer>
     <p>EcoGrow © 2026 - Conectando la naturaleza con la tecnología</p>
   </footer>
