@@ -164,3 +164,135 @@ function exportarDatos() {
 
   alert(resumen);
 }
+
+// ====== VALIDACIONES DEL FORMULARIO ======
+
+const form = document.getElementById("registration-form");
+const nombre = document.getElementById("nombre");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const confirmPassword = document.getElementById("confirm-password");
+const edad = document.getElementById("edad");
+const submitBtn = document.getElementById("submit-btn");
+
+// Expresión regular para validar email
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Expresión regular para validar contraseña (8+ caracteres, 1 número, 1 carácter especial)
+const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
+
+function validateNombre() {
+  if (nombre.value === "") return true;
+  const isValid = nombre.value.length >= 3;
+  toggleError("error-nombre", !isValid);
+  toggleFieldStyle(nombre, isValid);
+  return isValid;
+}
+
+function validateEmail() {
+  if (email.value === "") return true;
+  const isValid = emailRegex.test(email.value);
+  toggleError("error-email", !isValid);
+  toggleFieldStyle(email, isValid);
+  return isValid;
+}
+
+function validatePassword() {
+  if (password.value === "") return true;
+  const isValid = passwordRegex.test(password.value);
+  toggleError("error-password", !isValid);
+  toggleFieldStyle(password, isValid);
+  return isValid;
+}
+
+function validateConfirmPassword() {
+  if (confirmPassword.value === "") return true;
+  const isValid = password.value === confirmPassword.value && confirmPassword.value !== "";
+  toggleError("error-confirm-password", !isValid);
+  toggleFieldStyle(confirmPassword, isValid);
+  return isValid;
+}
+
+function validateEdad() {
+  if (edad.value === "") return true;
+  const isValid = edad.value >= 18;
+  toggleError("error-edad", !isValid);
+  toggleFieldStyle(edad, isValid);
+  return isValid;
+}
+
+function toggleError(errorId, show) {
+  const errorElement = document.getElementById(errorId);
+  if (show) {
+    errorElement.classList.remove("hidden");
+  } else {
+    errorElement.classList.add("hidden");
+  }
+}
+
+function toggleFieldStyle(field, isValid) {
+  if (field.value === "") {
+    field.classList.remove("valid", "invalid");
+  } else if (isValid) {
+    field.classList.remove("invalid");
+    field.classList.add("valid");
+  } else {
+    field.classList.remove("valid");
+    field.classList.add("invalid");
+  }
+}
+
+function checkFormValidity() {
+  const allFilled = nombre.value !== "" && email.value !== "" && password.value !== "" && confirmPassword.value !== "" && edad.value !== "";
+  const allValid = 
+    allFilled &&
+    validateNombre() && 
+    validateEmail() && 
+    validatePassword() && 
+    validateConfirmPassword() && 
+    validateEdad();
+  
+  submitBtn.disabled = !allValid;
+  return allValid;
+}
+
+// Event listeners para validación en tiempo real
+nombre.addEventListener("input", checkFormValidity);
+email.addEventListener("input", checkFormValidity);
+password.addEventListener("input", checkFormValidity);
+confirmPassword.addEventListener("input", checkFormValidity);
+edad.addEventListener("input", checkFormValidity);
+
+// Manejar envío del formulario
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  
+  if (checkFormValidity()) {
+    const mensaje = `
+✅ ¡Registro exitoso!
+
+Datos ingresados:
+- Nombre: ${nombre.value}
+- Email: ${email.value}
+- Edad: ${edad.value} años
+
+Gracias por registrarte en EcoGrow.
+    `;
+    alert(mensaje);
+    form.reset();
+    submitBtn.disabled = true;
+  }
+});
+
+// Reiniciar formulario
+form.addEventListener("reset", () => {
+  setTimeout(() => {
+    submitBtn.disabled = true;
+    document.querySelectorAll("#registration-form input").forEach(input => {
+      input.classList.remove("valid", "invalid");
+    });
+    document.querySelectorAll("#registration-form p[id^='error-']").forEach(error => {
+      error.classList.add("hidden");
+    });
+  }, 0);
+});
