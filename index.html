@@ -1,91 +1,124 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EcoGrow - Torre Hidropónica</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoGrow | Panel de Control</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header>
-    <h1>🌱 EcoGrow - Torre Hidropónica</h1>
-    <p>Monitoreo visual de tu sistema inteligente</p>
-  </header>
 
-  <section class="gallery">
-    <img src="assets/img/img1.jpeg" alt="Torre con plantas" />
-    <img src="assets/img/img2.jpeg" alt="Estructura sin plantas" />
-    <img src="assets/img/img3.jpeg" alt="Torre con lechugas" />
-  </section>
+<body class="bg-slate-50 dark:bg-slate-900 font-[Manrope] text-slate-800 dark:text-slate-200 min-h-screen transition-colors">
 
-  <section class="status">
-    <div class="card">
-      <h2>💧 Nivel de Agua</h2>
-      <p id="waterLevel">--%</p>
+<header class="bg-white dark:bg-slate-800 shadow-sm border-b dark:border-slate-700 transition-colors">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-2 text-green-600">
+      <span class="material-symbols-outlined text-3xl">potted_plant</span>
+      <h1 class="text-2xl font-extrabold">EcoGrow</h1>
     </div>
-    <div class="card">
-      <h2>🌡️ Temperatura</h2>
-      <p id="temperature">--°C</p>
-    </div>
-    <div class="card">
-      <h2>🌿 Nutrientes</h2>
-      <p id="nutrients">--%</p>
-    </div>
-    <div class="card">
-      <h2>💡 Iluminación</h2>
-      <p id="light">--%</p>
-    </div>
-    <div class="card">
-      <h2>⚗️ pH</h2>
-      <p id="ph">--</p>
-    </div>
-  </section>
+    <button onclick="toggleDark()" id="dark-mode-btn" class="material-symbols-outlined text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-slate-100 transition-colors">
+      dark_mode
+    </button>
+  </div>
+</header>
 
-  <!-- NUEVO: Formulario con validaciones dinámicas -->
-  <section class="form-section">
-    <h2>Formulario de Registro</h2>
-    <form id="registroForm">
-      <label>
-        Nombre:
-        <input type="text" id="nombre" required />
-        <span class="error" id="error-nombre"></span>
-      </label>
+<main class="max-w-6xl mx-auto px-6 py-8 space-y-10">
 
-      <label>
-        Correo electrónico:
-        <input type="email" id="correo" required />
-        <span class="error" id="error-correo"></span>
-      </label>
-
-      <label>
-        Contraseña:
-        <input type="password" id="password" required />
-        <span class="error" id="error-password"></span>
-      </label>
-
-      <label>
-        Confirmar Contraseña:
-        <input type="password" id="confirmPassword" required />
-        <span class="error" id="error-confirm"></span>
-      </label>
-
-      <label>
-        Edad:
-        <input type="number" id="edad" required />
-        <span class="error" id="error-edad"></span>
-      </label>
-
-      <div class="form-buttons">
-        <button type="submit" id="submitBtn" disabled>Enviar</button>
-        <button type="reset">Reiniciar</button>
+  <!-- GALERÍA DE IMÁGENES -->
+  <section>
+    <h2 class="text-2xl font-extrabold mb-4 dark:text-slate-100">Galería del Sistema</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-all">
+        <img src="./assets/img/img1.jpeg" alt="Sistema EcoGrow - Vista 1" class="w-full h-64 object-cover">
       </div>
-    </form>
+      <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-all">
+        <img src="./assets/img/img2.jpeg" alt="Sistema EcoGrow - Vista 2" class="w-full h-64 object-cover">
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-all">
+        <img src="./assets/img/img3.jpeg" alt="Sistema EcoGrow - Vista 3" class="w-full h-64 object-cover">
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>EcoGrow © 2026 - Conectando la naturaleza con la tecnología</p>
-  </footer>
+  <!-- PANEL SENSORES -->
+  <section>
+    <h2 class="text-2xl font-extrabold mb-4 dark:text-slate-100">Panel de Sensores</h2>
 
-  <script src="script.js"></script>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+
+      <!-- Agua -->
+      <div class="card">
+        <span class="material-symbols-outlined text-blue-500">water_drop</span>
+        <p class="label">Nivel de Agua</p>
+        <p id="nivel-agua" class="value">85%</p>
+      </div>
+
+      <!-- Humedad -->
+      <div class="card">
+        <span class="material-symbols-outlined text-teal-500">humidity_mid</span>
+        <p class="label">Humedad</p>
+        <p id="humedad" class="value">62%</p>
+      </div>
+
+      <!-- Temperatura -->
+      <div class="card">
+        <span class="material-symbols-outlined text-orange-500">device_thermostat</span>
+        <p class="label">Temperatura</p>
+        <p id="temperatura" class="value">24.5°C</p>
+      </div>
+
+      <!-- Riego -->
+      <div class="card flex flex-col gap-2">
+        <span class="material-symbols-outlined text-green-600">sprinkler</span>
+        <p class="label">Riego</p>
+        <p id="estado-riego" class="text-green-600 font-bold">Activo</p>
+
+        <label class="switch">
+          <input type="checkbox" id="irrigation-toggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE PLANTAS -->
+  <section>
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-2xl font-extrabold text-slate-900 dark:text-slate-100">Plantas en Torre</h2>
+      <button id="add-plant-btn" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 flex items-center gap-2">
+        <span class="material-symbols-outlined">add_circle</span> Agregar Planta
+      </button>
+    </div>
+    <ul id="crop-list" class="divide-y divide-slate-200 dark:divide-slate-700 bg-white dark:bg-slate-800 rounded-xl shadow-sm"></ul>
+  </section>
+
+  <!-- BOTÓN DE RESUMEN -->
+  <section class="flex justify-end">
+    <button onclick="exportarDatos()" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-xl font-bold">
+      Ver Resumen del Sistema
+    </button>
+  </section>
+
+</main>
+
+<footer class="text-center text-slate-400 dark:text-slate-500 text-sm py-6">
+  © 2024 EcoGrow Smart Systems · Impreso en 3D
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,161 +1,55 @@
+/* styles.css */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f4fdf5;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  color: #2e7d32;
+  font-family: 'Manrope', sans-serif;
 }
-
-/* -------------------------
-   Estilos para Galería de Imágenes
-------------------------- */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  margin: 20px 0;
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
-
-.gallery img {
-  max-width: 300px;
-  max-height: 300px;
-  width: auto;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-  cursor: pointer;
-}
-
-.gallery img:hover {
-  transform: scale(1.1) rotate(2deg);
-  box-shadow: 0 8px 16px rgba(46, 125, 50, 0.4);
-  filter: brightness(1.1);
-}
-
-/* -------------------------
-   Estilos para Tarjetas de Estado
-------------------------- */
-.status {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  margin: 20px 0;
-}
-
 .card {
-  background-color: #ffffff;
-  border: 2px solid #4caf50;
-  border-radius: 10px;
-  padding: 20px;
-  min-width: 150px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  @apply bg-white dark:bg-slate-800 p-5 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col items-start gap-2 transition-colors;
+}
+.label {
+  @apply text-sm text-slate-500 dark:text-slate-400;
+}
+.value {
+  @apply text-xl font-extrabold text-slate-800 dark:text-slate-100;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
   cursor: pointer;
-}
-
-.card:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 8px 16px rgba(46, 125, 50, 0.3);
-  background-color: #f1f8f4;
-  border-color: #2e7d32;
-}
-
-.card h2 {
-  margin: 0 0 10px 0;
-  font-size: 1.2em;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #2e7d32;
-}
-
-header {
-  background-color: #4caf50;
-  color: white;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2em;
-}
-
-header p {
-  margin: 10px 0 0 0;
-  font-size: 1.1em;
-}
-
-footer {
-  background-color: #c8e6c9;
-  padding: 15px;
-  font-size: 14px;
-  color: #4caf50;
-  margin-top: 20px;
-}
-
-/* -------------------------
-   Estilos para Formulario de Registro
-------------------------- */
-.form-section {
-  max-width: 500px;
-  margin: 30px auto;
-  padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.form-section h2 {
-  margin-bottom: 20px;
-  color: #2e7d32;
-}
-
-.form-section label {
-  display: block;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.form-section input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
-
-.error {
-  color: red;
-  font-size: 0.9em;
-}
-
-.form-buttons {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.form-buttons button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-#submitBtn:disabled {
   background-color: #ccc;
-  cursor: not-allowed;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #22c55e;
+}
+input:checked + .slider:before {
+  transform: translateX(18px);
 }
