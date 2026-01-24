@@ -30,6 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
 const products = [
   {
     name: "Lechuga Mantecosa",
+    price: "$2.50",
+    cultivationCost: "$0.80",
+    description: "Hojas suaves, sabor mantecoso, ideal para ensaladas.",
     tier: "Nivel 1 • Botella PET #04",
     growth: 65,
     stage: "Vegetativa",
@@ -40,6 +43,9 @@ const products = [
   },
   {
     name: "Albahaca Italiana",
+    price: "$1.80",
+    cultivationCost: "$0.60",
+    description: "Aroma intenso, perfecta para pesto y salsas.",
     tier: "Nivel 2 • Botella PET #08",
     growth: 25,
     stage: "Plántula",
@@ -50,6 +56,9 @@ const products = [
   },
   {
     name: "Espinaca Baby",
+    price: "$3.00",
+    cultivationCost: "$1.20",
+    description: "Hojas tiernas, alto contenido de hierro.",
     tier: "Nivel 3 • Botella PET #12",
     growth: 95,
     stage: "Madura",
@@ -80,6 +89,9 @@ function renderPlant(plant) {
       <div>
         <h4 class="text-lg font-bold text-slate-900 dark:text-slate-100">${plant.name}</h4>
         <p class="text-sm text-slate-500 dark:text-slate-400">${plant.tier}</p>
+        ${plant.price ? `<p class="text-sm text-green-600 font-semibold mt-1">Venta: ${plant.price}</p>` : ''}
+        ${plant.cultivationCost ? `<p class="text-sm text-orange-500 font-semibold">Cultivo: ${plant.cultivationCost}</p>` : ''}
+        ${plant.description ? `<p class="text-sm text-slate-600 dark:text-slate-400 mt-1">${plant.description}</p>` : ''}
       </div>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 flex-1">
