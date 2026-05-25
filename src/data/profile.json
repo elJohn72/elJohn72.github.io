@@ -1,0 +1,83 @@
+{
+  "name": "El John",
+  "email": "contacto@eljohn72.dev",
+  "photo": "/images/profile.svg",
+  "social": {
+    "github": "https://github.com/elJohn72",
+    "linkedin": "https://www.linkedin.com/in/eljohn72"
+  },
+  "title": {
+    "es": "Odontólogo · Docente · Emprendedor tecnológico",
+    "en": "Dentist · Educator · Tech entrepreneur"
+  },
+  "bio": {
+    "es": "Profesional multidisciplinar que conecta odontología, educación universitaria y emprendimiento en robótica, salud digital y sistemas sostenibles. Fundador de iniciativas como EcoGrow y AJTecnology, con experiencia docente en la Universidad Estatal Amazónica y desarrollo de plataformas EdTech.",
+    "en": "Multidisciplinary professional bridging dentistry, university teaching, and entrepreneurship in robotics, digital health, and sustainable systems. Founder of initiatives such as EcoGrow and AJTecnology, with teaching experience at Universidad Estatal Amazónica and EdTech platform development."
+  },
+  "highlights": {
+    "es": [
+      "Sistemas hidropónicos inteligentes impresos en 3D (EcoGrow)",
+      "Plataformas de aprendizaje y automatización (AJT / AJENZA)",
+      "Salud digital y accesibilidad (SaludIA, SmartVest)",
+      "Docencia en programación, estructuras de datos y desarrollo web"
+    ],
+    "en": [
+      "Intelligent 3D-printed hydroponic systems (EcoGrow)",
+      "Learning platforms and automation (AJT / AJENZA)",
+      "Digital health and accessibility (SaludIA, SmartVest)",
+      "Teaching programming, data structures, and web development"
+    ]
+  },
+  "skills": [
+    { "name": "Astro / TypeScript", "level": 85 },
+    { "name": "Python", "level": 90 },
+    { "name": "Robótica / G-code", "level": 80 },
+    { "name": "IoT / Automatización", "level": 82 },
+    { "name": "Docencia universitaria", "level": 95 },
+    { "name": "Salud digital", "level": 78 }
+  ],
+  "roles": {
+    "dentistry": {
+      "es": "Formación y práctica en odontología, con enfoque en innovación aplicada al bienestar y la salud preventiva.",
+      "en": "Dentistry background with a focus on innovation applied to wellness and preventive health."
+    },
+    "teaching": {
+      "es": "Docente en UEA — fundamentos de programación, POO, estructuras de datos y desarrollo de aplicaciones web.",
+      "en": "UEA instructor — programming fundamentals, OOP, data structures, and web application development."
+    },
+    "entrepreneurship": {
+      "es": "Co-fundador de AJTecnology y AJENZA; desarrollo de productos EcoGrow, plataformas EdTech y automatización operativa.",
+      "en": "Co-founder of AJTecnology and AJENZA; EcoGrow products, EdTech platforms, and operations automation."
+    },
+    "robotics": {
+      "es": "Cursos y proyectos de robótica, fabricación digital e integración hardware-software para educación y prototipado.",
+      "en": "Robotics courses and projects, digital fabrication, and hardware-software integration for education and prototyping."
+    }
+  },
+  "timeline": [
+    {
+      "year": "2024–2026",
+      "title": { "es": "Emprendimiento tecnológico", "en": "Tech entrepreneurship" },
+      "description": {
+        "es": "EcoGrow, SaludIA, SmartVest, AJT Learning Platform y sistemas AJENZA.",
+        "en": "EcoGrow, SaludIA, SmartVest, AJT Learning Platform, and AJENZA systems."
+      }
+    },
+    {
+      "year": "2020–2026",
+      "title": { "es": "Docencia universitaria (UEA)", "en": "University teaching (UEA)" },
+      "description": {
+        "es": "Materias de programación, POO, estructuras de datos y desarrollo web.",
+        "en": "Programming, OOP, data structures, and web development courses."
+      }
+    },
+    {
+      "year": "—",
+      "title": { "es": "Odontología e innovación en salud", "en": "Dentistry & health innovation" },
+      "description": {
+        "es": "Base clínica que orienta proyectos de salud digital y accesibilidad.",
+        "en": "Clinical foundation guiding digital health and accessibility projects."
+      }
+    }
+  ]
+}

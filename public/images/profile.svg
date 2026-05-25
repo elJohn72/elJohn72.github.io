@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" role="img" aria-label="El John">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14b8a6"/>
+      <stop offset="100%" style="stop-color:#0f766e"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="280" rx="32" fill="url(#g)"/>
+  <circle cx="140" cy="110" r="48" fill="rgba(255,255,255,0.25)"/>
+  <ellipse cx="140" cy="220" rx="72" ry="56" fill="rgba(255,255,255,0.2)"/>
+  <text x="140" y="258" text-anchor="middle" fill="white" font-family="system-ui,sans-serif" font-size="28" font-weight="700">EJ</text>
+</svg>

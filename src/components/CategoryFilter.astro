@@ -1,0 +1,65 @@
+---
+import type { Locale } from '../i18n/ui';
+import { getUi } from '../i18n/ui';
+import { categories } from '../lib/data';
+
+interface Props {
+  locale: Locale;
+  activeCategory?: string;
+}
+
+const { locale, activeCategory = 'all' } = Astro.props;
+const t = getUi(locale);
+---
+
+<div class="flex flex-wrap gap-2" id="category-filters" role="tablist" aria-label="Project categories">
+  <button
+    type="button"
+    data-category="all"
+    class:list={[
+      'filter-btn rounded-full px-4 py-2 text-sm font-medium transition',
+      activeCategory === 'all'
+        ? 'bg-brand-600 text-white'
+        : 'bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200',
+    ]}
+  >
+    {t.sections.filterAll}
+  </button>
+  {categories.map((cat) => (
+    <button
+      type="button"
+      data-category={cat}
+      class:list={[
+        'filter-btn rounded-full px-4 py-2 text-sm font-medium transition',
+        activeCategory === cat
+          ? 'bg-brand-600 text-white'
+          : 'bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200',
+      ]}
+    >
+      {t.categories[cat]}
+    </button>
+  ))}
+</div>
+
+<script>
+  const grid = document.getElementById('projects-grid');
+  const buttons = document.querySelectorAll('.filter-btn');
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const category = btn.getAttribute('data-category');
+      buttons.forEach((b) => {
+        b.classList.remove('bg-brand-600', 'text-white');
+        b.classList.add('bg-slate-100', 'text-slate-700', 'dark:bg-slate-800', 'dark:text-slate-200');
+      });
+      btn.classList.add('bg-brand-600', 'text-white');
+      btn.classList.remove('bg-slate-100', 'text-slate-700', 'dark:bg-slate-800', 'dark:text-slate-200');
+
+      grid?.querySelectorAll('[data-project-category]').forEach((card) => {
+        const cardCat = card.getAttribute('data-project-category');
+        const show = category === 'all' || cardCat === category;
+        (card as HTMLElement).style.display = show ? '' : 'none';
+      });
+    });
+  });
+</script>

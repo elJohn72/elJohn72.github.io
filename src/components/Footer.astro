@@ -1,0 +1,26 @@
+---
+import type { Locale } from '../i18n/ui';
+import { getUi } from '../i18n/ui';
+import { profile } from '../lib/data';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getUi(locale);
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-slate-200 bg-white dark:border-slate-800 dark:bg-ink-950">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 md:flex-row md:items-center md:justify-between md:px-6">
+    <p class="text-sm text-slate-500 dark:text-slate-400">
+      © {year} {profile.name}. {t.footer.rights}
+    </p>
+    <div class="flex gap-4 text-sm">
+      <a href={profile.social.github} class="text-slate-600 hover:text-brand-600 dark:text-slate-300" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href={profile.social.linkedin} class="text-slate-600 hover:text-brand-600 dark:text-slate-300" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href={`mailto:${profile.email}`} class="text-slate-600 hover:text-brand-600 dark:text-slate-300">{profile.email}</a>
+    </div>
+  </div>
+</footer>

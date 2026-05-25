@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getUi } from '../../i18n/ui';
+import { profile } from '../../lib/data';
+
+const locale = 'es';
+const t = getUi(locale);
+---
+
+<BaseLayout locale={locale} title={t.contact.title} description={t.contact.subtitle} pathname={Astro.url.pathname}>
+  <div class="mx-auto max-w-2xl px-4 py-12 md:px-6 md:py-16">
+    <h1 class="section-title">{t.contact.title}</h1>
+    <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">{t.contact.subtitle}</p>
+    <div class="card-surface mt-10 space-y-6">
+      <div>
+        <h2 class="text-sm font-semibold uppercase text-slate-500">{t.contact.email}</h2>
+        <a href={`mailto:${profile.email}`} class="mt-2 block text-xl font-medium text-brand-600 hover:underline">{profile.email}</a>
+      </div>
+      <div>
+        <h2 class="text-sm font-semibold uppercase text-slate-500">GitHub</h2>
+        <a href={profile.social.github} class="mt-2 block text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">{profile.social.github}</a>
+      </div>
+      <div>
+        <h2 class="text-sm font-semibold uppercase text-slate-500">LinkedIn</h2>
+        <a href={profile.social.linkedin} class="mt-2 block text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">{profile.social.linkedin}</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

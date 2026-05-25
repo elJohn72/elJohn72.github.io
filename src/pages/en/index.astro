@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { getUi, localePath } from '../../i18n/ui';
+import { profile, getFeaturedProjects } from '../../lib/data';
+
+const locale = 'en';
+const t = getUi(locale);
+const featured = getFeaturedProjects();
+const pathname = Astro.url.pathname;
+---
+
+<BaseLayout
+  locale={locale}
+  title="Portfolio"
+  description={profile.bio.en}
+  pathname={pathname}
+>
+  <section class="relative overflow-hidden border-b border-slate-200/80 bg-gradient-to-br from-brand-50 via-white to-slate-50 dark:border-slate-800 dark:from-ink-950 dark:via-ink-900 dark:to-ink-950">
+    <div class="mx-auto grid max-w-6xl gap-10 px-4 py-16 md:grid-cols-2 md:items-center md:px-6 md:py-24">
+      <div>
+        <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-600">Portfolio</p>
+        <h1 class="font-display text-4xl font-bold leading-tight text-ink-900 dark:text-white md:text-5xl">
+          {profile.name}
+        </h1>
+        <p class="mt-4 text-lg text-brand-700 dark:text-brand-300">{profile.title.en}</p>
+        <p class="mt-4 max-w-xl text-slate-600 dark:text-slate-300">{profile.bio.en}</p>
+        <ul class="mt-6 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+          {profile.highlights.en.map((h) => (
+            <li class="flex gap-2"><span class="text-brand-500">▸</span>{h}</li>
+          ))}
+        </ul>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href={localePath('en', '/projects')} class="btn-primary">{t.hero.ctaProjects}</a>
+          <a href={localePath('en', '/cv')} class="btn-secondary">{t.hero.ctaCv}</a>
+          <a href={localePath('en', '/contact')} class="btn-secondary">{t.hero.ctaContact}</a>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <img src={profile.photo} alt={profile.name} width="280" height="280" class="rounded-3xl border-4 border-white shadow-2xl dark:border-slate-700" />
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-16 md:px-6">
+    <h2 class="section-title">{t.sections.featured}</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {featured.map((project) => (
+        <ProjectCard project={project} locale={locale} />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

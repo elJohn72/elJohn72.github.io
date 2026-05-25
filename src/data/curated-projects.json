@@ -1,0 +1,233 @@
+[
+  {
+    "id": "ecogrow",
+    "repo": "elJohn72/Ecogrow.io",
+    "featured": true,
+    "category": "ecotech",
+    "locales": {
+      "es": {
+        "title": "EcoGrow.io",
+        "summary": "Sistema hidropónico inteligente impreso en 3D con botellas PET recicladas, automatización de riego y control de cultivo sostenible.",
+        "role": "Fundador / desarrollo — AJTecnology"
+      },
+      "en": {
+        "title": "EcoGrow.io",
+        "summary": "Intelligent 3D-printed hydroponic system using recycled PET bottles, automated irrigation, and sustainable crop control.",
+        "role": "Founder / development — AJTecnology"
+      }
+    },
+    "tags": ["IoT", "3D printing", "hydroponics", "sustainability"],
+    "demoUrl": null,
+    "image": null
+  },
+  {
+    "id": "proyecto-ecogrow",
+    "repo": "elJohn72/proyecto_ecogrow",
+    "featured": false,
+    "category": "ecotech",
+    "locales": {
+      "es": {
+        "title": "Proyecto EcoGrow",
+        "summary": "Implementación y experimentación del ecosistema EcoGrow: sensores, control y prototipos.",
+        "role": "Desarrollo técnico"
+      },
+      "en": {
+        "title": "EcoGrow Project",
+        "summary": "EcoGrow ecosystem implementation: sensors, control logic, and prototypes.",
+        "role": "Technical development"
+      }
+    },
+    "tags": ["Python", "IoT"],
+    "demoUrl": null,
+    "image": null
+  },
+  {
+    "id": "saludia",
+    "repo": "elJohn72/saludia-copago",
+    "featured": true,
+    "category": "healthtech",
+    "locales": {
+      "es": {
+        "title": "SaludIA Copago",
+        "summary": "Estimador agéntico de copago y cobertura para pacientes asegurados en el ecosistema de salud.",
+        "role": "Arquitectura / desarrollo"
+      },
+      "en": {
+        "title": "SaludIA Copay",
+        "summary": "Agentic copay and coverage estimator for insured patients in the healthcare ecosystem.",
+        "role": "Architecture / development"
+      }
+    },
+    "tags": ["AI agents", "healthcare", "insurance"],
+    "demoUrl": null,
+    "image": null
+  },
+  {
+    "id": "smartvest",
+    "repo": "elJohn72/Smartvest",
+    "featured": true,
+    "category": "healthtech",
+    "locales": {
+      "es": {
+        "title": "SmartVest",
+        "summary": "Dispositivo wearable para personas con discapacidad visual — navegación y asistencia.",
+        "role": "Desarrollo — TypeScript / hardware"
+      },
+      "en": {
+        "title": "SmartVest",
+        "summary": "Wearable device for people with visual impairment — navigation and assistance.",
+        "role": "Development — TypeScript / hardware"
+      }
+    },
+    "tags": ["accessibility", "TypeScript", "wearables"],
+    "demoUrl": null,
+    "image": null
+  },
+  {
+    "id": "ajt-learning",
+    "repo": "elJohn72/ajt-learning-platform",
+    "featured": true,
+    "category": "edtech",
+    "locales": {
+      "es": {
+        "title": "AJT Learning Platform",
+        "summary": "Monorepo de plataforma de aprendizaje para cursos, contenidos y experiencias educativas digitales.",
+        "role": "Arquitecto / desarrollo full-stack"
+      },
+      "en": {
+        "title": "AJT Learning Platform",
+        "summary": "Learning platform monorepo for courses, content, and digital educational experiences.",
+        "role": "Architect / full-stack development"
+      }
+    },
+    "tags": ["EdTech", "JavaScript", "monorepo"],
+    "demoUrl": null,
+    "image": null
+  },
+  {
+    "id": "ajenza-ops",
+    "repo": "elJohn72/ajenza-ops-systems",
+    "featured": false,
+    "category": "automation",
+    "locales": {
+      "es": {
+        "title": "AJENZA Ops Systems",
+        "summary": "Automatizaciones operativas para flujos de trabajo y procesos internos de AJENZA.",
+        "role": "Desarrollo de automatización"
+      },
+      "en": {
+        "title": "AJENZA Ops Systems",
+        "summary": "Operational automations for AJENZA workflows and internal processes.",
+        "role": "Automation development"
+      }
+    },
+    "tags": ["automation", "JavaScript"],
+    "demoUrl": null,
+    "image": null
+  },
+  {
+    "id": "robotica",
+    "repo": "elJohn72/Robotica",
+    "featured": true,
+    "category": "robotics",
+    "locales": {
+      "es": {
+        "title": "Robótica",
+        "summary": "Repositorio de cursos, G-code y materiales de robótica educativa y fabricación digital.",
+        "role": "Autor / instructor"
+      },
+      "en": {
+        "title": "Robotics",
+        "summary": "Repository of courses, G-code, and materials for educational robotics and digital fabrication.",
+        "role": "Author / instructor"
+      }
+    },
+    "tags": ["robotics", "G-code", "education"],
+    "demoUrl": null,
+    "image": null
+  },
+  {
+    "id": "fundamentos-programacion",
+    "repo": "elJohn72/2024FundamentosDeLaProgramacion",
+    "featured": false,
+    "category": "teaching",
+    "locales": {
+      "es": {
+        "title": "Fundamentos de Programación (UEA)",
+        "summary": "Material docente de fundamentos de programación — Universidad Estatal Amazónica.",
+        "role": "Docente"
+      },
+      "en": {
+        "title": "Programming Fundamentals (UEA)",
+        "summary": "Teaching materials for programming fundamentals — Universidad Estatal Amazónica.",
+        "role": "Instructor"
+      }
+    },
+    "tags": ["Python", "UEA"],
+    "demoUrl": null,
+    "image": null
+  },
+  {
+    "id": "estructuras-datos",
+    "repo": "elJohn72/2525---ESTRUCTURA-DE-DATOS-D----UEA-L-UFB-032-D",
+    "featured": false,
+    "category": "teaching",
+    "locales": {
+      "es": {
+        "title": "Estructura de Datos (UEA)",
+        "summary": "Repositorio de la materia Estructura de Datos — ejercicios y guías en C#.",
+        "role": "Docente"
+      },
+      "en": {
+        "title": "Data Structures (UEA)",
+        "summary": "Data Structures course repository — exercises and guides in C#.",
+        "role": "Instructor"
+      }
+    },
+    "tags": ["C#", "UEA"],
+    "demoUrl": null,
+    "image": null
+  },
+  {
+    "id": "desarrollo-web",
+    "repo": "elJohn72/2526---DESARROLLO-DE-APLICACIONES-WEB-A----UEA-L-UFPTI-004-A",
+    "featured": false,
+    "category": "teaching",
+    "locales": {
+      "es": {
+        "title": "Desarrollo de Aplicaciones Web (UEA)",
+        "summary": "Repositorio de la materia de aplicaciones web — paralelo B, HTML/CSS/JS.",
+        "role": "Docente"
+      },
+      "en": {
+        "title": "Web Application Development (UEA)",
+        "summary": "Web applications course repository — HTML/CSS/JS materials.",
+        "role": "Instructor"
+      }
+    },
+    "tags": ["HTML", "UEA", "web"],
+    "demoUrl": null,
+    "image": null
+  },
+  {
+    "id": "poo",
+    "repo": "elJohn72/PROGRAMACION-ORIENTADA-A-OBJETOS-A----UEA-L-UFB-030-A",
+    "featured": false,
+    "category": "teaching",
+    "locales": {
+      "es": {
+        "title": "Programación Orientada a Objetos (UEA)",
+        "summary": "Material de POO para la UEA — Python y paradigmas orientados a objetos.",
+        "role": "Docente"
+      },
+      "en": {
+        "title": "Object-Oriented Programming (UEA)",
+        "summary": "OOP course materials for UEA — Python and object-oriented paradigms.",
+        "role": "Instructor"
+      }
+    },
+    "tags": ["Python", "OOP", "UEA"],
+    "demoUrl": null,
+    "image": null
+  }
+]

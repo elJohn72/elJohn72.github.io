@@ -1,0 +1,62 @@
+---
+import type { Locale } from '../i18n/ui';
+import { getUi, localePath } from '../i18n/ui';
+import LocaleSwitcher from './LocaleSwitcher.astro';
+import ThemeToggle from './ThemeToggle.astro';
+
+interface Props {
+  locale: Locale;
+  pathname: string;
+}
+
+const { locale, pathname } = Astro.props;
+const t = getUi(locale);
+
+const links =
+  locale === 'es'
+    ? [
+        { href: localePath('es', '/'), label: t.nav.home },
+        { href: localePath('es', '/proyectos'), label: t.nav.projects },
+        { href: localePath('es', '/sobre-mi'), label: t.nav.about },
+        { href: localePath('es', '/cv'), label: t.nav.cv },
+        { href: localePath('es', '/contacto'), label: t.nav.contact },
+      ]
+    : [
+        { href: localePath('en', '/'), label: t.nav.home },
+        { href: localePath('en', '/projects'), label: t.nav.projects },
+        { href: localePath('en', '/about'), label: t.nav.about },
+        { href: localePath('en', '/cv'), label: t.nav.cv },
+        { href: localePath('en', '/contact'), label: t.nav.contact },
+      ];
+---
+
+<header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-lg dark:border-slate-800/70 dark:bg-ink-950/80">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 md:px-6">
+    <a href={localePath(locale, '/')} class="font-display text-lg font-semibold text-ink-900 dark:text-white">
+      {locale === 'es' ? 'El John' : 'El John'}
+      <span class="text-brand-600">.</span>
+    </a>
+    <nav class="hidden items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300 md:flex" aria-label="Main">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'transition hover:text-brand-600 dark:hover:text-brand-400',
+            pathname === link.href || pathname.startsWith(link.href + '/') ? 'text-brand-600 dark:text-brand-400' : '',
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+    <div class="flex items-center gap-2">
+      <LocaleSwitcher locale={locale} pathname={pathname} />
+      <ThemeToggle />
+    </div>
+  </div>
+  <nav class="flex gap-4 overflow-x-auto border-t border-slate-100 px-4 py-2 text-xs dark:border-slate-800 md:hidden" aria-label="Mobile">
+    {links.map((link) => (
+      <a href={link.href} class="whitespace-nowrap text-slate-600 dark:text-slate-300">{link.label}</a>
+    ))}
+  </nav>
+</header>

@@ -1,0 +1,23 @@
+---
+import type { Locale } from '../i18n/ui';
+import { switchLocalePath } from '../i18n/ui';
+
+interface Props {
+  locale: Locale;
+  pathname: string;
+}
+
+const { locale, pathname } = Astro.props;
+const other: Locale = locale === 'es' ? 'en' : 'es';
+const href = switchLocalePath(locale, other, pathname);
+const label = other.toUpperCase();
+---
+
+<a
+  href={href}
+  class="rounded-full border border-slate-300 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-600 transition hover:border-brand-400 hover:text-brand-700 dark:border-slate-600 dark:text-slate-300"
+  hreflang={other}
+  lang={other}
+>
+  {label}
+</a>

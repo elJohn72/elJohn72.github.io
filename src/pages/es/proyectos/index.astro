@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ProjectCard from '../../../components/ProjectCard.astro';
+import CategoryFilter from '../../../components/CategoryFilter.astro';
+import { getUi } from '../../../i18n/ui';
+import { profile, projects } from '../../../lib/data';
+
+const locale = 'es';
+const t = getUi(locale);
+---
+
+<BaseLayout locale={locale} title="Proyectos" description={profile.bio.es} pathname={Astro.url.pathname}>
+  <div class="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
+    <h1 class="section-title">{t.sections.allProjects}</h1>
+    <div class="mt-6">
+      <CategoryFilter locale={locale} />
+    </div>
+    <div id="projects-grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project) => (
+        <div data-project-category={project.category}>
+          <ProjectCard project={project} locale={locale} />
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
