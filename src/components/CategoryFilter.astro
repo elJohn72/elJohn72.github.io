@@ -10,32 +10,19 @@ interface Props {
 
 const { locale, activeCategory = 'all' } = Astro.props;
 const t = getUi(locale);
+
+const btnClass = (active: boolean) =>
+  active
+    ? 'filter-btn filter-btn-active rounded-lg border px-4 py-2 text-sm transition'
+    : 'filter-btn filter-btn-inactive rounded-lg border px-4 py-2 text-sm transition';
 ---
 
 <div class="flex flex-wrap gap-2" id="category-filters" role="tablist" aria-label="Project categories">
-  <button
-    type="button"
-    data-category="all"
-    class:list={[
-      'filter-btn rounded-full px-4 py-2 text-sm font-medium transition',
-      activeCategory === 'all'
-        ? 'bg-brand-600 text-white'
-        : 'bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200',
-    ]}
-  >
+  <button type="button" data-category="all" class={btnClass(activeCategory === 'all')}>
     {t.sections.filterAll}
   </button>
   {categories.map((cat) => (
-    <button
-      type="button"
-      data-category={cat}
-      class:list={[
-        'filter-btn rounded-full px-4 py-2 text-sm font-medium transition',
-        activeCategory === cat
-          ? 'bg-brand-600 text-white'
-          : 'bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200',
-      ]}
-    >
+    <button type="button" data-category={cat} class={btnClass(activeCategory === cat)}>
       {t.categories[cat]}
     </button>
   ))}
@@ -49,11 +36,11 @@ const t = getUi(locale);
     btn.addEventListener('click', () => {
       const category = btn.getAttribute('data-category');
       buttons.forEach((b) => {
-        b.classList.remove('bg-brand-600', 'text-white');
-        b.classList.add('bg-slate-100', 'text-slate-700', 'dark:bg-slate-800', 'dark:text-slate-200');
+        b.classList.remove('filter-btn-active');
+        b.classList.add('filter-btn-inactive');
       });
-      btn.classList.add('bg-brand-600', 'text-white');
-      btn.classList.remove('bg-slate-100', 'text-slate-700', 'dark:bg-slate-800', 'dark:text-slate-200');
+      btn.classList.add('filter-btn-active');
+      btn.classList.remove('filter-btn-inactive');
 
       grid?.querySelectorAll('[data-project-category]').forEach((card) => {
         const cardCat = card.getAttribute('data-project-category');

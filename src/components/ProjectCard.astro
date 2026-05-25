@@ -18,26 +18,25 @@ const detailPath =
 const categoryLabel = t.categories[project.category];
 ---
 
-<article class="card-surface group flex h-full flex-col transition hover:-translate-y-1 hover:shadow-md">
+<article class="card-surface group flex h-full flex-col">
+  <div class="absolute right-0 top-0 h-16 w-16 bg-gradient-to-bl from-cyan-500/10 to-transparent" aria-hidden="true"></div>
   <div class="mb-3 flex items-start justify-between gap-2">
-    <span class="rounded-full bg-brand-100 px-3 py-1 text-xs font-semibold text-brand-800 dark:bg-brand-900/40 dark:text-brand-200">
-      {categoryLabel}
-    </span>
+    <span class="tech-badge">{categoryLabel}</span>
     {project.stars > 0 && (
-      <span class="text-xs text-slate-500">★ {project.stars}</span>
+      <span class="font-mono text-[10px] text-amber-400/90">★ {project.stars}</span>
     )}
   </div>
-  <h3 class="font-display text-xl font-semibold text-ink-900 dark:text-white">
-    <a href={detailPath} class="hover:text-brand-600 dark:hover:text-brand-400">{info.title}</a>
+  <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">
+    <a href={detailPath} class="transition hover:text-cyan-300">{info.title}</a>
   </h3>
-  <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{info.summary}</p>
+  <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-400">{info.summary}</p>
   <div class="mt-4 flex flex-wrap gap-2">
     {project.tags.slice(0, 4).map((tag) => (
-      <span class="rounded-md bg-slate-100 px-2 py-0.5 text-xs text-slate-600 dark:bg-slate-800 dark:text-slate-300">{tag}</span>
+      <span class="tech-tag">{tag}</span>
     ))}
   </div>
-  <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-4 text-xs text-slate-500 dark:border-slate-700 dark:text-slate-400">
+  <div class="mt-4 flex items-center justify-between border-t border-slate-700/80 pt-4 font-mono text-[10px] text-slate-500">
     <span>{formatDate(project.updatedAt, locale)}</span>
-    <a href={detailPath} class="font-semibold text-brand-600 hover:underline dark:text-brand-400">→</a>
+    <a href={detailPath} class="text-cyan-400 transition hover:text-cyan-300">read_more() →</a>
   </div>
 </article>

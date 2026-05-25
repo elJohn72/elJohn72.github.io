@@ -9,7 +9,8 @@ const t = getUi(locale);
 
 <BaseLayout locale={locale} title={t.contact.title} description={t.contact.subtitle} pathname={Astro.url.pathname}>
   <div class="mx-auto max-w-2xl px-4 py-12 md:px-6 md:py-16">
-    <h1 class="section-title">{t.contact.title}</h1>
+    <p class="section-label">// contact</p>
+    <h1 class="section-title mt-2">{t.contact.title}</h1>
     <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">{t.contact.subtitle}</p>
     <div class="card-surface mt-10 space-y-6">
       <div>

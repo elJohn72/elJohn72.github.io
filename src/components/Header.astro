@@ -28,21 +28,30 @@ const links =
         { href: localePath('en', '/cv'), label: t.nav.cv },
         { href: localePath('en', '/contact'), label: t.nav.contact },
       ];
+
+const isActive = (href: string) =>
+  pathname === href || (href !== `/${locale}/` && pathname.startsWith(href));
 ---
 
-<header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-lg dark:border-slate-800/70 dark:bg-ink-950/80">
+<header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl dark:border-slate-800/80 dark:bg-ink-950/70">
   <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 md:px-6">
-    <a href={localePath(locale, '/')} class="font-display text-lg font-semibold text-ink-900 dark:text-white">
-      {locale === 'es' ? 'El John' : 'El John'}
-      <span class="text-brand-600">.</span>
+    <a
+      href={localePath(locale, '/')}
+      class="group flex items-center gap-2 font-mono text-sm font-semibold text-ink-900 dark:text-slate-200"
+    >
+      <span class="rounded border border-cyan-500/40 bg-cyan-500/10 px-1.5 py-0.5 text-[10px] text-cyan-400">EJ</span>
+      <span class="hidden sm:inline">eljohn72</span>
+      <span class="text-cyan-400 transition group-hover:text-cyan-300">_</span>
     </a>
-    <nav class="hidden items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300 md:flex" aria-label="Main">
+    <nav class="hidden items-center gap-1 md:flex" aria-label="Main">
       {links.map((link) => (
         <a
           href={link.href}
           class:list={[
-            'transition hover:text-brand-600 dark:hover:text-brand-400',
-            pathname === link.href || pathname.startsWith(link.href + '/') ? 'text-brand-600 dark:text-brand-400' : '',
+            'rounded-lg px-3 py-2 font-mono text-xs transition',
+            isActive(link.href)
+              ? 'border border-cyan-500/30 bg-cyan-500/10 text-cyan-300'
+              : 'text-slate-600 hover:bg-slate-100 hover:text-ink-900 dark:text-slate-400 dark:hover:bg-slate-800/50 dark:hover:text-slate-200',
           ]}
         >
           {link.label}
@@ -54,9 +63,20 @@ const links =
       <ThemeToggle />
     </div>
   </div>
-  <nav class="flex gap-4 overflow-x-auto border-t border-slate-100 px-4 py-2 text-xs dark:border-slate-800 md:hidden" aria-label="Mobile">
+  <nav
+    class="flex gap-2 overflow-x-auto border-t border-slate-200 px-4 py-2 dark:border-slate-800/80 md:hidden"
+    aria-label="Mobile"
+  >
     {links.map((link) => (
-      <a href={link.href} class="whitespace-nowrap text-slate-600 dark:text-slate-300">{link.label}</a>
+      <a
+        href={link.href}
+        class:list={[
+          'whitespace-nowrap rounded px-2 py-1 font-mono text-xs',
+          isActive(link.href) ? 'text-cyan-400' : 'text-slate-500',
+        ]}
+      >
+        {link.label}
+      </a>
     ))}
   </nav>
 </header>

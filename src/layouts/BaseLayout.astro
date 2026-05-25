@@ -4,6 +4,7 @@ import type { Locale } from '../i18n/ui';
 import { profile } from '../lib/data';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import TechBackground from '../components/TechBackground.astro';
 
 interface Props {
   locale: Locale;
@@ -18,12 +19,13 @@ const canonical = new URL(pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang={locale} class="scroll-smooth">
+<html lang={locale} class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#030712" />
     <link rel="canonical" href={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={siteTitle} />
@@ -34,7 +36,7 @@ const canonical = new URL(pathname, Astro.site);
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -48,13 +50,25 @@ const canonical = new URL(pathname, Astro.site);
       jobTitle: profile.title[locale],
       description: profile.bio[locale],
     })} />
+    <script is:inline>
+      (function () {
+        const key = 'portfolio-theme';
+        const stored = localStorage.getItem(key);
+        if (stored === 'light') document.documentElement.classList.remove('dark');
+        else if (stored === 'dark' || !stored) document.documentElement.classList.add('dark');
+      })();
+    </script>
   </head>
-  <body>
-    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-brand-600 focus:px-4 focus:py-2 focus:text-white">
+  <body class="min-h-screen">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:border focus:border-cyan-400 focus:bg-ink-900 focus:px-4 focus:py-2 focus:font-mono focus:text-cyan-300"
+    >
       {locale === 'es' ? 'Saltar al contenido' : 'Skip to content'}
     </a>
+    <TechBackground />
     <Header locale={locale} pathname={pathname} />
-    <main id="main">
+    <main id="main" class="relative">
       <slot />
     </main>
     <Footer locale={locale} />

@@ -20,21 +20,21 @@ const info = getLocalizedProject(project, locale);
 
 <BaseLayout locale={locale} title={info.title} description={info.summary} pathname={Astro.url.pathname}>
   <article class="mx-auto max-w-3xl px-4 py-12 md:px-6 md:py-16">
-    <a href={localePath('es', '/proyectos')} class="text-sm font-medium text-brand-600 hover:underline">← Proyectos</a>
-    <p class="mt-6 text-sm font-semibold uppercase text-brand-600">{t.categories[project.category]}</p>
-    <h1 class="mt-2 font-display text-4xl font-bold text-ink-900 dark:text-white">{info.title}</h1>
-    <p class="mt-2 text-slate-500">{t.project.role}: {info.role}</p>
+    <a href={localePath('es', '/proyectos')} class="font-mono text-xs text-cyan-500 hover:text-cyan-400">← cd ../proyectos</a>
+    <p class="mt-6"><span class="tech-badge">{t.categories[project.category]}</span></p>
+    <h1 class="mt-4 font-display text-4xl font-bold text-ink-900 dark:text-white">{info.title}</h1>
+    <p class="mt-2 font-mono text-sm text-slate-500">{t.project.role}: <span class="text-cyan-600 dark:text-cyan-400">{info.role}</span></p>
     <p class="mt-6 text-lg leading-relaxed text-slate-600 dark:text-slate-300">{info.summary}</p>
     {project.githubDescription && (
-      <p class="mt-4 text-slate-500 italic">{project.githubDescription}</p>
+      <p class="mt-4 font-mono text-sm text-slate-500 italic">// {project.githubDescription}</p>
     )}
     <div class="mt-6 flex flex-wrap gap-2">
       {project.tags.map((tag) => (
-        <span class="rounded-md bg-slate-100 px-3 py-1 text-sm dark:bg-slate-800">{tag}</span>
+        <span class="tech-tag">{tag}</span>
       ))}
     </div>
-    <div class="mt-8 flex flex-wrap gap-4 text-sm text-slate-500">
-      <span>★ {project.stars} {t.project.stars}</span>
+    <div class="mt-8 flex flex-wrap gap-4 font-mono text-xs text-slate-500">
+      <span class="text-amber-500/90">★ {project.stars} {t.project.stars}</span>
       <span>{t.project.updated}: {formatDate(project.updatedAt, locale)}</span>
     </div>
     <div class="mt-8 flex gap-4">

@@ -5,13 +5,13 @@ import { profile } from '../lib/data';
 <div class="grid gap-4 sm:grid-cols-2">
   {profile.skills.map((skill) => (
     <div class="card-surface">
-      <div class="mb-2 flex justify-between text-sm font-medium">
-        <span>{skill.name}</span>
-        <span class="text-brand-600">{skill.level}%</span>
+      <div class="mb-2 flex justify-between font-mono text-xs">
+        <span class="text-slate-300">{skill.name}</span>
+        <span class="text-cyan-400">{skill.level}%</span>
       </div>
-      <div class="h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
+      <div class="h-1.5 overflow-hidden rounded-full bg-slate-800">
         <div
-          class="h-full rounded-full bg-gradient-to-r from-brand-500 to-brand-700"
+          class="h-full rounded-full bg-gradient-to-r from-cyan-500 via-cyan-400 to-violet-500 shadow-[0_0_12px_rgba(34,211,238,0.5)]"
           style={`width: ${skill.level}%`}
           role="progressbar"
           aria-valuenow={skill.level}

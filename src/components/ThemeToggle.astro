@@ -1,11 +1,11 @@
 <button
   id="theme-toggle"
   type="button"
-  class="rounded-full border border-slate-300 p-2 text-slate-600 transition hover:border-brand-400 hover:text-brand-600 dark:border-slate-600 dark:text-slate-300 dark:hover:border-brand-500"
+  class="rounded-lg border border-slate-700 bg-ink-850 p-2 font-mono text-xs text-slate-400 transition hover:border-cyan-500/40 hover:text-cyan-400"
   aria-label="Toggle theme"
 >
-  <span class="theme-icon-dark hidden dark:inline" aria-hidden="true">☀️</span>
-  <span class="theme-icon-light inline dark:hidden" aria-hidden="true">🌙</span>
+  <span class="theme-icon-dark hidden dark:inline" aria-hidden="true">◐</span>
+  <span class="theme-icon-light inline dark:hidden" aria-hidden="true">◑</span>
 </button>
 
 <script>
@@ -16,10 +16,6 @@
     if (theme === 'dark') root.classList.add('dark');
     else root.classList.remove('dark');
   }
-
-  const stored = localStorage.getItem(storageKey) as 'light' | 'dark' | null;
-  if (stored) applyTheme(stored);
-  else if (window.matchMedia('(prefers-color-scheme: dark)').matches) applyTheme('dark');
 
   document.getElementById('theme-toggle')?.addEventListener('click', () => {
     const next = root.classList.contains('dark') ? 'light' : 'dark';

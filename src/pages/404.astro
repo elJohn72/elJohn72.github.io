@@ -4,16 +4,21 @@ import { localePath } from '../i18n/ui';
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 | El John</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="flex min-h-screen flex-col items-center justify-center bg-slate-50 p-6 text-center font-sans dark:bg-ink-950">
-    <h1 class="text-6xl font-bold text-teal-600">404</h1>
-    <p class="mt-4 text-slate-600 dark:text-slate-300">Página no encontrada / Page not found</p>
-    <a href={localePath('es', '/')} class="mt-6 font-semibold text-teal-600 hover:underline">← Inicio / Home</a>
+  <body class="tech-grid-bg flex min-h-screen flex-col items-center justify-center p-6 text-center font-sans text-slate-300">
+    <p class="font-mono text-xs text-cyan-500">ERR_NOT_FOUND</p>
+    <h1 class="mt-2 font-display text-7xl font-bold text-cyan-400">404</h1>
+    <p class="mt-4 font-mono text-sm text-slate-500">Página no encontrada / Page not found</p>
+    <a href={localePath('es', '/')} class="btn-primary mt-8">← home()</a>
   </body>
 </html>
