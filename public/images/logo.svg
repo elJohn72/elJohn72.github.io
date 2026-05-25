@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" role="img" aria-label="eljhon72">
+  <defs>
+    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="55%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Icon mark -->
+  <rect x="0" y="4" width="32" height="32" rx="8" fill="#0f1729" stroke="url(#logo-grad)" stroke-width="1.5"/>
+  <text x="16" y="25" text-anchor="middle" fill="url(#logo-grad)" font-family="ui-monospace,monospace" font-size="11" font-weight="700" filter="url(#glow)">72</text>
+  <!-- Brackets + wordmark -->
+  <text x="42" y="26" fill="#475569" font-family="ui-monospace,monospace" font-size="18" font-weight="500">&lt;</text>
+  <text x="54" y="26" fill="url(#logo-grad)" font-family="ui-monospace,monospace" font-size="17" font-weight="700" letter-spacing="-0.5" filter="url(#glow)">eljhon72</text>
+  <text x="196" y="26" fill="#475569" font-family="ui-monospace,monospace" font-size="18" font-weight="500">/&gt;</text>
+  <!-- Cursor underscore -->
+  <rect x="198" y="22" width="8" height="2" rx="1" fill="#22d3ee">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+</svg>

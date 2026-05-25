@@ -60,10 +60,6 @@ export const ui = {
       robotics: 'Robótica',
       teaching: 'Docencia',
     },
-    theme: {
-      light: 'Modo claro',
-      dark: 'Modo oscuro',
-    },
   },
   en: {
     nav: {
@@ -119,10 +115,6 @@ export const ui = {
       automation: 'Automation',
       robotics: 'Robotics',
       teaching: 'Teaching',
-    },
-    theme: {
-      light: 'Light mode',
-      dark: 'Dark mode',
     },
   },
 } as const;

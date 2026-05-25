@@ -22,9 +22,9 @@ const info = getLocalizedProject(project, locale);
   <article class="mx-auto max-w-3xl px-4 py-12 md:px-6 md:py-16">
     <a href={localePath('es', '/proyectos')} class="font-mono text-xs text-cyan-500 hover:text-cyan-400">← cd ../proyectos</a>
     <p class="mt-6"><span class="tech-badge">{t.categories[project.category]}</span></p>
-    <h1 class="mt-4 font-display text-4xl font-bold text-ink-900 dark:text-white">{info.title}</h1>
-    <p class="mt-2 font-mono text-sm text-slate-500">{t.project.role}: <span class="text-cyan-600 dark:text-cyan-400">{info.role}</span></p>
-    <p class="mt-6 text-lg leading-relaxed text-slate-600 dark:text-slate-300">{info.summary}</p>
+    <h1 class="mt-4 font-display text-4xl font-bold text-white">{info.title}</h1>
+    <p class="mt-2 font-mono text-sm text-slate-500">{t.project.role}: <span class="text-cyan-400">{info.role}</span></p>
+    <p class="mt-6 text-lg leading-relaxed text-slate-300">{info.summary}</p>
     {project.githubDescription && (
       <p class="mt-4 font-mono text-sm text-slate-500 italic">// {project.githubDescription}</p>
     )}

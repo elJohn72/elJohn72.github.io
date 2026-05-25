@@ -19,7 +19,7 @@ const { locale } = Astro.props;
         {String(i + 1).padStart(2, '0')}
       </span>
       <p class="font-mono text-[10px] font-semibold uppercase tracking-widest text-cyan-500/80">{item.year}</p>
-      <h3 class="mt-1 font-display text-lg font-bold text-ink-900 dark:text-white">{item.title[locale]}</h3>
+      <h3 class="mt-1 font-display text-lg font-bold text-white">{item.title[locale]}</h3>
       <p class="mt-1 text-sm text-slate-400">{item.description[locale]}</p>
     </li>
   ))}

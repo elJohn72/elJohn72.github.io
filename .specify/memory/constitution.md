@@ -5,19 +5,22 @@
 ### I. Accessibility First
 WCAG 2.1 AA: sufficient contrast, keyboard navigation, semantic HTML, `lang` attribute per locale (`es`, `en`). Agent MUST consult `web-design-guidelines` and `accessibility` skills when reviewing UI.
 
-### II. Bilingual by URL
+### II. Dark Mode Only
+The site uses a single dark theme (`color-scheme: dark`). No light mode toggle — assets and photography are optimized for dark backgrounds.
+
+### III. Bilingual by URL
 Explicit locales at `/es/` and `/en/`. No mixed-language pages. Locale switcher preserves logical page mapping.
 
-### III. Performance
+### IV. Performance
 Lighthouse mobile score target ≥ 90. No runtime CDN frameworks in production. Static assets only after `astro build`.
 
-### IV. Curated Content First
+### V. Curated Content First
 Project catalog is authored in `curated-projects.json`. GitHub API enriches metadata only (stars, dates, descriptions). Teaching repos are categorized separately from product showcases.
 
-### V. SEO & Discoverability
+### VI. SEO & Discoverability
 Every page has unique title/description, Open Graph tags, `sitemap.xml`, `robots.txt`, and JSON-LD where applicable. Agent MUST use `seo-audit` and `schema-markup` skills before release.
 
-### VI. Simplicity & Maintainability
+### VII. Simplicity & Maintainability
 One project = one curated entry. Fixed categories: ecotech, healthtech, edtech, automation, robotics, teaching. Prefer Astro components over abstractions.
 
 ## Technical Constraints

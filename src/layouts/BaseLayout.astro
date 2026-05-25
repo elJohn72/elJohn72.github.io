@@ -14,7 +14,7 @@ interface Props {
 }
 
 const { locale, title, description, pathname } = Astro.props;
-const siteTitle = `${title} | ${profile.name}`;
+const siteTitle = `${title} | eljhon72`;
 const canonical = new URL(pathname, Astro.site);
 ---
 
@@ -26,6 +26,7 @@ const canonical = new URL(pathname, Astro.site);
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#030712" />
+    <meta name="color-scheme" content="dark" />
     <link rel="canonical" href={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={siteTitle} />
@@ -50,14 +51,6 @@ const canonical = new URL(pathname, Astro.site);
       jobTitle: profile.title[locale],
       description: profile.bio[locale],
     })} />
-    <script is:inline>
-      (function () {
-        const key = 'portfolio-theme';
-        const stored = localStorage.getItem(key);
-        if (stored === 'light') document.documentElement.classList.remove('dark');
-        else if (stored === 'dark' || !stored) document.documentElement.classList.add('dark');
-      })();
-    </script>
   </head>
   <body class="min-h-screen">
     <a
