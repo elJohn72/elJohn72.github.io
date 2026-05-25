@@ -1,5 +1,65 @@
 [
   {
+    "id": "ajtecnology",
+    "repo": null,
+    "featured": true,
+    "category": "edtech",
+    "locales": {
+      "es": {
+        "title": "AJTecnology",
+        "summary": "Empresa de innovación tecnológica: robótica, EdTech, automatización y productos como EcoGrow. Sitio corporativo en producción.",
+        "role": "Fundador / CEO"
+      },
+      "en": {
+        "title": "AJTecnology",
+        "summary": "Technology innovation company: robotics, EdTech, automation, and products like EcoGrow. Corporate site in production.",
+        "role": "Founder / CEO"
+      }
+    },
+    "tags": [
+      "production",
+      "EdTech",
+      "robotics"
+    ],
+    "demoUrl": "https://ajtecnology.com",
+    "image": null,
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-05-25T22:06:18.354Z",
+    "githubDescription": null,
+    "htmlUrl": "https://ajtecnology.com"
+  },
+  {
+    "id": "ajdent",
+    "repo": null,
+    "featured": true,
+    "category": "healthtech",
+    "locales": {
+      "es": {
+        "title": "AJ Dent",
+        "summary": "Sitio web profesional de odontología y servicios dentales — presencia digital en producción.",
+        "role": "Fundador / odontólogo"
+      },
+      "en": {
+        "title": "AJ Dent",
+        "summary": "Professional dentistry and dental services website — live digital presence.",
+        "role": "Founder / dentist"
+      }
+    },
+    "tags": [
+      "production",
+      "dentistry",
+      "health"
+    ],
+    "demoUrl": "https://ajdent.site",
+    "image": null,
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-05-25T22:06:18.355Z",
+    "githubDescription": null,
+    "htmlUrl": "https://ajdent.site"
+  },
+  {
     "id": "ecogrow",
     "repo": "elJohn72/Ecogrow.io",
     "featured": true,
@@ -55,7 +115,7 @@
     "image": null,
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2026-05-25T21:42:53.725Z",
+    "updatedAt": "2026-05-25T22:06:19.659Z",
     "githubDescription": null,
     "htmlUrl": "https://github.com/elJohn72/proyecto_ecogrow"
   },
@@ -141,11 +201,11 @@
       "JavaScript",
       "monorepo"
     ],
-    "demoUrl": null,
+    "demoUrl": "https://ajtecnology.com",
     "image": null,
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2026-05-25T21:42:54.608Z",
+    "updatedAt": "2026-05-25T22:06:20.343Z",
     "githubDescription": null,
     "htmlUrl": "https://github.com/elJohn72/ajt-learning-platform"
   },
@@ -174,7 +234,7 @@
     "image": null,
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2026-05-25T21:42:54.864Z",
+    "updatedAt": "2026-05-25T22:06:20.572Z",
     "githubDescription": null,
     "htmlUrl": "https://github.com/elJohn72/ajenza-ops-systems"
   },

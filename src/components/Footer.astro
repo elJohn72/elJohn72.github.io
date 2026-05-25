@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '../i18n/ui';
 import { getUi } from '../i18n/ui';
-import { profile } from '../lib/data';
+import { profile, socialLabels } from '../lib/data';
 
 interface Props {
   locale: Locale;
@@ -13,35 +13,33 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="relative border-t border-slate-800/80 bg-ink-950/80 backdrop-blur-md">
-  <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:justify-between md:px-6">
-    <div class="flex flex-col gap-3">
-      <img src="/images/logo.svg" alt="eljhon72" width="160" height="28" class="h-7 w-auto opacity-80" loading="lazy" />
-      <p class="font-mono text-xs text-slate-500">
-        <span class="text-cyan-500/80">©</span> {year} {profile.name}
-        <span class="text-slate-600"> — </span>
-        {t.footer.rights}
-      </p>
+  <div class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+    <div class="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+      <div class="flex flex-col gap-3">
+        <img src="/images/logo.svg" alt="eljhon72" width="160" height="28" class="h-7 w-auto opacity-80" loading="lazy" />
+        <p class="font-mono text-xs text-slate-500">
+          <span class="text-cyan-500/80">©</span> {year} {profile.name}
+          <span class="text-slate-600"> — </span>
+          {t.footer.rights}
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-x-4 gap-y-2 font-mono text-xs">
+        {Object.entries(profile.social).map(([key, url]) => (
+          <a href={url} class="text-slate-400 transition hover:text-cyan-400" target="_blank" rel="noopener noreferrer">
+            {socialLabels[key]?.[locale] ?? key}
+          </a>
+        ))}
+        <a href={`mailto:${profile.email}`} class="text-slate-400 transition hover:text-cyan-400">
+          {profile.email}
+        </a>
+      </div>
     </div>
-    <div class="flex flex-wrap gap-4 font-mono text-xs">
-      <a
-        href={profile.social.github}
-        class="text-slate-400 transition hover:text-cyan-400"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub
-      </a>
-      <a
-        href={profile.social.linkedin}
-        class="text-slate-400 transition hover:text-violet-400"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn
-      </a>
-      <a href={`mailto:${profile.email}`} class="text-slate-400 transition hover:text-cyan-400">
-        {profile.email}
-      </a>
+    <div class="mt-6 flex flex-wrap gap-4 border-t border-slate-800/80 pt-6 font-mono text-xs">
+      {profile.productionSites.map((site) => (
+        <a href={site.url} class="text-emerald-400/90 transition hover:text-emerald-300" target="_blank" rel="noopener noreferrer">
+          {site.url.replace('https://', '')} ↗
+        </a>
+      ))}
     </div>
   </div>
 </footer>

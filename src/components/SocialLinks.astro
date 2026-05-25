@@ -1,0 +1,29 @@
+---
+import type { Locale } from '../i18n/ui';
+import { socialLabels, profile } from '../lib/data';
+
+interface Props {
+  locale: Locale;
+  variant?: 'list' | 'grid';
+}
+
+const { locale, variant = 'list' } = Astro.props;
+const entries = Object.entries(profile.social);
+const wrapperClass = variant === 'grid' ? 'grid gap-3 sm:grid-cols-2' : 'space-y-4';
+---
+
+<div class={wrapperClass}>
+  {entries.map(([key, url]) => (
+    <a
+      href={url}
+      class="card-surface group flex items-center justify-between gap-3 transition hover:border-cyan-500/40"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="font-mono text-sm text-slate-300 group-hover:text-cyan-300">
+        {socialLabels[key]?.[locale] ?? key}
+      </span>
+      <span class="font-mono text-xs text-cyan-500/80">↗</span>
+    </a>
+  ))}
+</div>

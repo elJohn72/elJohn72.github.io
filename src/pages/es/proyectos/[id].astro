@@ -37,10 +37,12 @@ const info = getLocalizedProject(project, locale);
       <span class="text-amber-500/90">★ {project.stars} {t.project.stars}</span>
       <span>{t.project.updated}: {formatDate(project.updatedAt, locale)}</span>
     </div>
-    <div class="mt-8 flex gap-4">
-      <a href={project.htmlUrl} class="btn-primary" target="_blank" rel="noopener noreferrer">{t.project.viewRepo}</a>
+    <div class="mt-8 flex flex-wrap gap-4">
       {project.demoUrl && (
-        <a href={project.demoUrl} class="btn-secondary" target="_blank" rel="noopener noreferrer">{t.project.viewDemo}</a>
+        <a href={project.demoUrl} class="btn-primary" target="_blank" rel="noopener noreferrer">{t.project.viewDemo} ↗</a>
+      )}
+      {project.repo && (
+        <a href={project.htmlUrl} class="btn-secondary" target="_blank" rel="noopener noreferrer">{t.project.viewRepo}</a>
       )}
     </div>
   </article>

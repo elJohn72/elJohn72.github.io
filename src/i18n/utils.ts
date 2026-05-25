@@ -16,7 +16,7 @@ export interface ProjectLocale {
 
 export interface CuratedProject {
   id: string;
-  repo: string;
+  repo: string | null;
   featured: boolean;
   category: ProjectCategory;
   locales: Record<Locale, ProjectLocale>;
@@ -31,6 +31,7 @@ export interface MergedProject extends CuratedProject {
   updatedAt: string;
   githubDescription: string | null;
   htmlUrl: string;
+  repo: string | null;
 }
 
 export function getLocalizedProject(project: MergedProject | CuratedProject, locale: Locale) {

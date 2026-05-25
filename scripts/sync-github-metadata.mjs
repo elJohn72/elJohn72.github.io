@@ -29,6 +29,18 @@ async function main() {
   const merged = [];
 
   for (const project of curated) {
+    if (!project.repo) {
+      merged.push({
+        ...project,
+        stars: 0,
+        forks: 0,
+        updatedAt: new Date().toISOString(),
+        githubDescription: null,
+        htmlUrl: project.demoUrl ?? '#',
+      });
+      continue;
+    }
+
     const [owner, name] = project.repo.split('/');
     let github = null;
     try {

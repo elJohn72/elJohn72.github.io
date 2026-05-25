@@ -1,5 +1,47 @@
 [
   {
+    "id": "ajtecnology",
+    "repo": null,
+    "featured": true,
+    "category": "edtech",
+    "locales": {
+      "es": {
+        "title": "AJTecnology",
+        "summary": "Empresa de innovación tecnológica: robótica, EdTech, automatización y productos como EcoGrow. Sitio corporativo en producción.",
+        "role": "Fundador / CEO"
+      },
+      "en": {
+        "title": "AJTecnology",
+        "summary": "Technology innovation company: robotics, EdTech, automation, and products like EcoGrow. Corporate site in production.",
+        "role": "Founder / CEO"
+      }
+    },
+    "tags": ["production", "EdTech", "robotics"],
+    "demoUrl": "https://ajtecnology.com",
+    "image": null
+  },
+  {
+    "id": "ajdent",
+    "repo": null,
+    "featured": true,
+    "category": "healthtech",
+    "locales": {
+      "es": {
+        "title": "AJ Dent",
+        "summary": "Sitio web profesional de odontología y servicios dentales — presencia digital en producción.",
+        "role": "Fundador / odontólogo"
+      },
+      "en": {
+        "title": "AJ Dent",
+        "summary": "Professional dentistry and dental services website — live digital presence.",
+        "role": "Founder / dentist"
+      }
+    },
+    "tags": ["production", "dentistry", "health"],
+    "demoUrl": "https://ajdent.site",
+    "image": null
+  },
+  {
     "id": "ecogrow",
     "repo": "elJohn72/Ecogrow.io",
     "featured": true,
@@ -101,7 +143,7 @@
       }
     },
     "tags": ["EdTech", "JavaScript", "monorepo"],
-    "demoUrl": null,
+    "demoUrl": "https://ajtecnology.com",
     "image": null
   },
   {

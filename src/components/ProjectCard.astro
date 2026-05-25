@@ -16,15 +16,22 @@ const detailPath =
     ? localePath('es', `/proyectos/${project.id}`)
     : localePath('en', `/projects/${project.id}`);
 const categoryLabel = t.categories[project.category];
+const isLive = Boolean(project.demoUrl);
+const hasRepo = Boolean(project.repo);
 ---
 
 <article class="card-surface group flex h-full flex-col">
   <div class="absolute right-0 top-0 h-16 w-16 bg-gradient-to-bl from-cyan-500/10 to-transparent" aria-hidden="true"></div>
-  <div class="mb-3 flex items-start justify-between gap-2">
+  <div class="mb-3 flex flex-wrap items-start justify-between gap-2">
     <span class="tech-badge">{categoryLabel}</span>
-    {project.stars > 0 && (
-      <span class="font-mono text-[10px] text-amber-400/90">★ {project.stars}</span>
-    )}
+    <div class="flex gap-2">
+      {isLive && (
+        <span class="tech-badge border-emerald-500/40 bg-emerald-500/10 text-emerald-300">{t.project.live}</span>
+      )}
+      {project.stars > 0 && (
+        <span class="font-mono text-[10px] text-amber-400/90">★ {project.stars}</span>
+      )}
+    </div>
   </div>
   <h3 class="font-display text-lg font-bold text-white">
     <a href={detailPath} class="transition hover:text-cyan-300">{info.title}</a>
@@ -35,8 +42,20 @@ const categoryLabel = t.categories[project.category];
       <span class="tech-tag">{tag}</span>
     ))}
   </div>
-  <div class="mt-4 flex items-center justify-between border-t border-slate-700/80 pt-4 font-mono text-[10px] text-slate-500">
+  <div class="mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-slate-700/80 pt-4 font-mono text-[10px] text-slate-500">
     <span>{formatDate(project.updatedAt, locale)}</span>
-    <a href={detailPath} class="text-cyan-400 transition hover:text-cyan-300">read_more() →</a>
+    <div class="flex gap-3">
+      {isLive && (
+        <a href={project.demoUrl!} class="text-emerald-400 hover:text-emerald-300" target="_blank" rel="noopener noreferrer">
+          {t.project.viewDemo} ↗
+        </a>
+      )}
+      {hasRepo && (
+        <a href={detailPath} class="text-cyan-400 hover:text-cyan-300">details() →</a>
+      )}
+      {!hasRepo && !isLive && (
+        <a href={detailPath} class="text-cyan-400 hover:text-cyan-300">details() →</a>
+      )}
+    </div>
   </div>
 </article>

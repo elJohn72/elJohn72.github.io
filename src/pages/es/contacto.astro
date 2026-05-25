@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SocialLinks from '../../components/SocialLinks.astro';
+import ProductionSites from '../../components/ProductionSites.astro';
 import { getUi } from '../../i18n/ui';
 import { profile } from '../../lib/data';
 
@@ -8,23 +10,32 @@ const t = getUi(locale);
 ---
 
 <BaseLayout locale={locale} title={t.contact.title} description={t.contact.subtitle} pathname={Astro.url.pathname}>
-  <div class="mx-auto max-w-2xl px-4 py-12 md:px-6 md:py-16">
+  <div class="mx-auto max-w-3xl px-4 py-12 md:px-6 md:py-16">
     <p class="section-label">// contacto</p>
     <h1 class="section-title mt-2">{t.contact.title}</h1>
     <p class="mt-4 text-lg text-slate-300">{t.contact.subtitle}</p>
-    <div class="card-surface mt-10 space-y-6">
-      <div>
-        <h2 class="text-sm font-semibold uppercase text-slate-500">{t.contact.email}</h2>
-        <a href={`mailto:${profile.email}`} class="mt-2 block text-xl font-medium text-brand-600 hover:underline">{profile.email}</a>
-      </div>
-      <div>
-        <h2 class="text-sm font-semibold uppercase text-slate-500">GitHub</h2>
-        <a href={profile.social.github} class="mt-2 block text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">{profile.social.github}</a>
-      </div>
-      <div>
-        <h2 class="text-sm font-semibold uppercase text-slate-500">LinkedIn</h2>
-        <a href={profile.social.linkedin} class="mt-2 block text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">{profile.social.linkedin}</a>
-      </div>
+
+    <div class="card-surface mt-10">
+      <h2 class="font-mono text-xs uppercase tracking-widest text-slate-500">{t.contact.email}</h2>
+      <a href={`mailto:${profile.email}`} class="mt-2 block font-mono text-xl text-cyan-400 hover:text-cyan-300">
+        {profile.email}
+      </a>
     </div>
+
+    <section class="mt-12">
+      <p class="section-label">// {t.sections.productionSites.toLowerCase()}</p>
+      <h2 class="section-title mt-2 text-2xl">{t.sections.productionSites}</h2>
+      <div class="mt-6">
+        <ProductionSites locale={locale} />
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <p class="section-label">// {t.sections.social.toLowerCase()}</p>
+      <h2 class="section-title mt-2 text-2xl">{t.sections.social}</h2>
+      <div class="mt-6">
+        <SocialLinks locale={locale} variant="grid" />
+      </div>
+    </section>
   </div>
 </BaseLayout>

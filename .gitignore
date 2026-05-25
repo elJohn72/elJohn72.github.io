@@ -12,6 +12,9 @@ dist/
 # OS
 .DS_Store
 
+# CV muy pesado (conservar solo localmente)
+public/cv/hoja-de-vida-completa.pdf
+
 # logs
 *.log
 

@@ -3,11 +3,33 @@ import projectsJson from '../data/projects.json';
 import type { Locale } from '../i18n/ui';
 import type { MergedProject, ProjectCategory } from '../i18n/utils';
 
+export interface Credential {
+  id: string;
+  file: string;
+  year: string;
+  locales: Record<Locale, { title: string; issuer: string }>;
+}
+
+export interface ProductionSite {
+  url: string;
+  label: string;
+  locales: Record<Locale, string>;
+}
+
+export interface CvFile {
+  file: string;
+  locales: Record<Locale, string>;
+  primary: boolean;
+}
+
 export interface Profile {
   name: string;
   email: string;
   photo: string;
   social: Record<string, string>;
+  productionSites: ProductionSite[];
+  credentials: Credential[];
+  cvFiles: CvFile[];
   title: Record<Locale, string>;
   bio: Record<Locale, string>;
   highlights: Record<Locale, string[]>;
@@ -19,6 +41,15 @@ export interface Profile {
     description: Record<Locale, string>;
   }[];
 }
+
+export const socialLabels: Record<string, Record<Locale, string>> = {
+  github: { es: 'GitHub', en: 'GitHub' },
+  linkedin: { es: 'LinkedIn', en: 'LinkedIn' },
+  facebook: { es: 'Facebook', en: 'Facebook' },
+  instagram: { es: 'Instagram', en: 'Instagram' },
+  tiktok: { es: 'TikTok', en: 'TikTok' },
+  youtube: { es: 'YouTube', en: 'YouTube' },
+};
 
 export const profile = profileJson as Profile;
 export const projects = projectsJson as MergedProject[];

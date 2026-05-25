@@ -1,31 +1,125 @@
 {
-  "name": "El John",
+  "name": "John Miraba",
   "email": "contacto@eljohn72.dev",
-  "photo": "/images/profile.svg",
+  "photo": "/images/profile.png",
   "social": {
     "github": "https://github.com/elJohn72",
-    "linkedin": "https://www.linkedin.com/in/eljohn72"
+    "linkedin": "https://www.linkedin.com/in/john-miraba/",
+    "facebook": "https://www.facebook.com/profile.php?id=100067697782298",
+    "instagram": "https://www.instagram.com/ayjtecnology/",
+    "tiktok": "https://www.tiktok.com/@ayjtecnology",
+    "youtube": "https://www.youtube.com/@ajtecnology"
   },
+  "productionSites": [
+    {
+      "url": "https://ajtecnology.com",
+      "label": "AJTecnology",
+      "locales": {
+        "es": "Empresa de innovación, robótica, EdTech y soluciones tecnológicas.",
+        "en": "Innovation company for robotics, EdTech, and technology solutions."
+      }
+    },
+    {
+      "url": "https://ajdent.site",
+      "label": "AJ Dent",
+      "locales": {
+        "es": "Sitio web profesional de odontología y servicios dentales.",
+        "en": "Professional dentistry and dental services website."
+      }
+    }
+  ],
+  "credentials": [
+    {
+      "id": "ingles-b1",
+      "file": "/titulos/certificado-ingles-b1.pdf",
+      "year": "2025",
+      "locales": {
+        "es": {
+          "title": "Certificación de inglés — Nivel B1",
+          "issuer": "Institución certificadora oficial"
+        },
+        "en": {
+          "title": "English certification — Level B1",
+          "issuer": "Official certifying institution"
+        }
+      }
+    },
+    {
+      "id": "robotica-lideres",
+      "file": "/titulos/certificado-robotica-lideres.pdf",
+      "year": "2025",
+      "locales": {
+        "es": {
+          "title": "Jornada pedagógica — Robótica para líderes",
+          "issuer": "Programa de formación en robótica educativa"
+        },
+        "en": {
+          "title": "Pedagogical workshop — Robotics for leaders",
+          "issuer": "Educational robotics training program"
+        }
+      }
+    },
+    {
+      "id": "certificacion-lideres",
+      "file": "/titulos/certificacion-lideres.pdf",
+      "year": "2024",
+      "locales": {
+        "es": {
+          "title": "Certificación de líderes",
+          "issuer": "Programa de liderazgo y gestión"
+        },
+        "en": {
+          "title": "Leadership certification",
+          "issuer": "Leadership and management program"
+        }
+      }
+    },
+    {
+      "id": "certificado-john-miraba",
+      "file": "/titulos/certificado-john-miraba.pdf",
+      "year": "2025",
+      "locales": {
+        "es": {
+          "title": "Certificado John Miraba",
+          "issuer": "Formación profesional"
+        },
+        "en": {
+          "title": "John Miraba certificate",
+          "issuer": "Professional training"
+        }
+      }
+    }
+  ],
+  "cvFiles": [
+    {
+      "file": "/cv/hoja-de-vida-john-miraba.pdf",
+      "locales": {
+        "es": "Hoja de vida — John Miraba",
+        "en": "Resume — John Miraba"
+      },
+      "primary": true
+    }
+  ],
   "title": {
     "es": "Odontólogo · Docente · Emprendedor tecnológico",
     "en": "Dentist · Educator · Tech entrepreneur"
   },
   "bio": {
-    "es": "Profesional multidisciplinar que conecta odontología, educación universitaria y emprendimiento en robótica, salud digital y sistemas sostenibles. Fundador de iniciativas como EcoGrow y AJTecnology, con experiencia docente en la Universidad Estatal Amazónica y desarrollo de plataformas EdTech.",
-    "en": "Multidisciplinary professional bridging dentistry, university teaching, and entrepreneurship in robotics, digital health, and sustainable systems. Founder of initiatives such as EcoGrow and AJTecnology, with teaching experience at Universidad Estatal Amazónica and EdTech platform development."
+    "es": "Soy John Miraba, profesional multidisciplinar que conecta odontología, educación universitaria y emprendimiento en robótica, salud digital y sistemas sostenibles. Fundador de AJTecnology y AJ Dent, con experiencia docente en la Universidad Estatal Amazónica.",
+    "en": "I'm John Miraba, a multidisciplinary professional bridging dentistry, university teaching, and entrepreneurship in robotics, digital health, and sustainable systems. Founder of AJTecnology and AJ Dent, with teaching experience at Universidad Estatal Amazónica."
   },
   "highlights": {
     "es": [
-      "Sistemas hidropónicos inteligentes impresos en 3D (EcoGrow)",
-      "Plataformas de aprendizaje y automatización (AJT / AJENZA)",
-      "Salud digital y accesibilidad (SaludIA, SmartVest)",
-      "Docencia en programación, estructuras de datos y desarrollo web"
+      "Sitios en producción: ajtecnology.com y ajdent.site",
+      "Sistemas hidropónicos inteligentes (EcoGrow) — AJTecnology",
+      "Plataformas EdTech y automatización (AJT / AJENZA)",
+      "Docencia UEA: programación, POO, estructuras de datos y web"
     ],
     "en": [
-      "Intelligent 3D-printed hydroponic systems (EcoGrow)",
-      "Learning platforms and automation (AJT / AJENZA)",
-      "Digital health and accessibility (SaludIA, SmartVest)",
-      "Teaching programming, data structures, and web development"
+      "Live sites: ajtecnology.com and ajdent.site",
+      "Intelligent hydroponic systems (EcoGrow) — AJTecnology",
+      "EdTech platforms and automation (AJT / AJENZA)",
+      "UEA teaching: programming, OOP, data structures, and web"
     ]
   },
   "skills": [
@@ -34,24 +128,24 @@
     { "name": "Robótica / G-code", "level": 80 },
     { "name": "IoT / Automatización", "level": 82 },
     { "name": "Docencia universitaria", "level": 95 },
-    { "name": "Salud digital", "level": 78 }
+    { "name": "Odontología / Salud digital", "level": 88 }
   ],
   "roles": {
     "dentistry": {
-      "es": "Formación y práctica en odontología, con enfoque en innovación aplicada al bienestar y la salud preventiva.",
-      "en": "Dentistry background with a focus on innovation applied to wellness and preventive health."
+      "es": "Odontólogo y emprendedor en salud oral. AJ Dent (ajdent.site) como presencia digital profesional.",
+      "en": "Dentist and oral health entrepreneur. AJ Dent (ajdent.site) as a professional digital presence."
     },
     "teaching": {
       "es": "Docente en UEA — fundamentos de programación, POO, estructuras de datos y desarrollo de aplicaciones web.",
       "en": "UEA instructor — programming fundamentals, OOP, data structures, and web application development."
     },
     "entrepreneurship": {
-      "es": "Co-fundador de AJTecnology y AJENZA; desarrollo de productos EcoGrow, plataformas EdTech y automatización operativa.",
-      "en": "Co-founder of AJTecnology and AJENZA; EcoGrow products, EdTech platforms, and operations automation."
+      "es": "Fundador de AJTecnology (ajtecnology.com) y AJENZA; EcoGrow, EdTech y automatización operativa.",
+      "en": "Founder of AJTecnology (ajtecnology.com) and AJENZA; EcoGrow, EdTech, and operations automation."
     },
     "robotics": {
-      "es": "Cursos y proyectos de robótica, fabricación digital e integración hardware-software para educación y prototipado.",
-      "en": "Robotics courses and projects, digital fabrication, and hardware-software integration for education and prototyping."
+      "es": "Cursos y certificaciones en robótica educativa, fabricación digital e integración hardware-software.",
+      "en": "Courses and certifications in educational robotics, digital fabrication, and hardware-software integration."
     }
   },
   "timeline": [
@@ -59,8 +153,8 @@
       "year": "2024–2026",
       "title": { "es": "Emprendimiento tecnológico", "en": "Tech entrepreneurship" },
       "description": {
-        "es": "EcoGrow, SaludIA, SmartVest, AJT Learning Platform y sistemas AJENZA.",
-        "en": "EcoGrow, SaludIA, SmartVest, AJT Learning Platform, and AJENZA systems."
+        "es": "AJTecnology.com, AJ Dent, EcoGrow, SaludIA, SmartVest y plataformas AJENZA.",
+        "en": "AJTecnology.com, AJ Dent, EcoGrow, SaludIA, SmartVest, and AJENZA platforms."
       }
     },
     {
@@ -73,10 +167,10 @@
     },
     {
       "year": "—",
-      "title": { "es": "Odontología e innovación en salud", "en": "Dentistry & health innovation" },
+      "title": { "es": "Odontología e innovación", "en": "Dentistry & innovation" },
       "description": {
-        "es": "Base clínica que orienta proyectos de salud digital y accesibilidad.",
-        "en": "Clinical foundation guiding digital health and accessibility projects."
+        "es": "Práctica clínica y proyectos de salud digital orientados al paciente.",
+        "en": "Clinical practice and patient-oriented digital health projects."
       }
     }
   ]
