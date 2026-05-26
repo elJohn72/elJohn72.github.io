@@ -39,8 +39,11 @@ export const ui = {
     },
     about: {
       title: 'Sobre mí',
-      dentistry: 'Odontología',
-      teaching: 'Docencia',
+      degrees: 'Formación académica',
+      dentalHygiene: 'Higiene dental',
+      engineering: 'Ingeniería (Electromecánica y OTI)',
+      education: 'Formación universitaria (UEA)',
+      teaching: 'Docencia — Andrés Bello',
       entrepreneurship: 'Emprendimiento',
       robotics: 'Robótica y tecnología',
     },
@@ -51,7 +54,7 @@ export const ui = {
     },
     contact: {
       title: 'Contacto',
-      subtitle: '¿Colaboramos en educación, salud digital o innovación tecnológica?',
+      subtitle: '¿Colaboramos en ingeniería, salud oral, educación o proyectos tecnológicos?',
       email: 'Correo',
     },
     footer: {
@@ -100,8 +103,11 @@ export const ui = {
     },
     about: {
       title: 'About me',
-      dentistry: 'Dentistry',
-      teaching: 'Teaching',
+      degrees: 'Academic background',
+      dentalHygiene: 'Dental hygiene',
+      engineering: 'Engineering (Electromechanical & IT)',
+      education: 'University studies (UEA)',
+      teaching: 'Teaching — Andrés Bello',
       entrepreneurship: 'Entrepreneurship',
       robotics: 'Robotics & technology',
     },
@@ -112,7 +118,7 @@ export const ui = {
     },
     contact: {
       title: 'Contact',
-      subtitle: 'Let\'s collaborate on education, digital health, or tech innovation.',
+      subtitle: 'Let\'s collaborate on engineering, oral health, education, or tech projects.',
       email: 'Email',
     },
     footer: {

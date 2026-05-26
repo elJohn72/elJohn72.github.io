@@ -7,13 +7,13 @@
     "locales": {
       "es": {
         "title": "AJTecnology",
-        "summary": "Empresa de innovación tecnológica: robótica, EdTech, automatización y productos como EcoGrow. Sitio corporativo en producción.",
-        "role": "Fundador / CEO"
+        "summary": "Empresa fundada por un Ing. en TI y electromecánico: robótica, EdTech, IoT, automatización y EcoGrow. Sitio en producción.",
+        "role": "Fundador — Ing. en TI"
       },
       "en": {
         "title": "AJTecnology",
-        "summary": "Technology innovation company: robotics, EdTech, automation, and products like EcoGrow. Corporate site in production.",
-        "role": "Founder / CEO"
+        "summary": "Company founded by an IT and electromechanical engineer: robotics, EdTech, IoT, automation, and EcoGrow. Live corporate site.",
+        "role": "Founder — IT Engineer"
       }
     },
     "tags": [
@@ -25,7 +25,7 @@
     "image": null,
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2026-05-25T22:06:18.354Z",
+    "updatedAt": "2026-05-26T00:20:47.009Z",
     "githubDescription": null,
     "htmlUrl": "https://ajtecnology.com"
   },
@@ -37,25 +37,25 @@
     "locales": {
       "es": {
         "title": "AJ Dent",
-        "summary": "Sitio web profesional de odontología y servicios dentales — presencia digital en producción.",
-        "role": "Fundador / odontólogo"
+        "summary": "Sitio en producción para higiene dental, prevención y marca personal en salud oral — AJ Dent.",
+        "role": "Fundador / higienista dental"
       },
       "en": {
         "title": "AJ Dent",
-        "summary": "Professional dentistry and dental services website — live digital presence.",
-        "role": "Founder / dentist"
+        "summary": "Live site for dental hygiene, prevention, and personal brand in oral health.",
+        "role": "Founder / dental hygienist"
       }
     },
     "tags": [
       "production",
-      "dentistry",
+      "dental hygiene",
       "health"
     ],
     "demoUrl": "https://ajdent.site",
     "image": null,
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2026-05-25T22:06:18.355Z",
+    "updatedAt": "2026-05-26T00:20:47.009Z",
     "githubDescription": null,
     "htmlUrl": "https://ajdent.site"
   },
@@ -115,7 +115,7 @@
     "image": null,
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2026-05-25T22:06:19.659Z",
+    "updatedAt": "2026-05-26T00:20:47.778Z",
     "githubDescription": null,
     "htmlUrl": "https://github.com/elJohn72/proyecto_ecogrow"
   },
@@ -205,7 +205,7 @@
     "image": null,
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2026-05-25T22:06:20.343Z",
+    "updatedAt": "2026-05-26T00:20:48.709Z",
     "githubDescription": null,
     "htmlUrl": "https://github.com/elJohn72/ajt-learning-platform"
   },
@@ -234,7 +234,7 @@
     "image": null,
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2026-05-25T22:06:20.572Z",
+    "updatedAt": "2026-05-26T00:20:48.974Z",
     "githubDescription": null,
     "htmlUrl": "https://github.com/elJohn72/ajenza-ops-systems"
   },
@@ -272,17 +272,17 @@
     "id": "fundamentos-programacion",
     "repo": "elJohn72/2024FundamentosDeLaProgramacion",
     "featured": false,
-    "category": "teaching",
+    "category": "edtech",
     "locales": {
       "es": {
         "title": "Fundamentos de Programación (UEA)",
-        "summary": "Material docente de fundamentos de programación — Universidad Estatal Amazónica.",
-        "role": "Docente"
+        "summary": "Material académico de fundamentos de programación — estudios en la Universidad Estatal Amazónica.",
+        "role": "Egresado UEA / autor académico"
       },
       "en": {
         "title": "Programming Fundamentals (UEA)",
-        "summary": "Teaching materials for programming fundamentals — Universidad Estatal Amazónica.",
-        "role": "Instructor"
+        "summary": "Academic materials for programming fundamentals — studies at Universidad Estatal Amazónica.",
+        "role": "UEA graduate / academic author"
       }
     },
     "tags": [
@@ -301,17 +301,17 @@
     "id": "estructuras-datos",
     "repo": "elJohn72/2525---ESTRUCTURA-DE-DATOS-D----UEA-L-UFB-032-D",
     "featured": false,
-    "category": "teaching",
+    "category": "edtech",
     "locales": {
       "es": {
         "title": "Estructura de Datos (UEA)",
-        "summary": "Repositorio de la materia Estructura de Datos — ejercicios y guías en C#.",
-        "role": "Docente"
+        "summary": "Repositorio académico de Estructura de Datos — ejercicios y guías en C# (formación UEA).",
+        "role": "Egresado UEA / autor académico"
       },
       "en": {
         "title": "Data Structures (UEA)",
-        "summary": "Data Structures course repository — exercises and guides in C#.",
-        "role": "Instructor"
+        "summary": "Academic Data Structures repository — exercises and guides in C# (UEA coursework).",
+        "role": "UEA graduate / academic author"
       }
     },
     "tags": [
@@ -330,17 +330,17 @@
     "id": "desarrollo-web",
     "repo": "elJohn72/2526---DESARROLLO-DE-APLICACIONES-WEB-A----UEA-L-UFPTI-004-A",
     "featured": false,
-    "category": "teaching",
+    "category": "edtech",
     "locales": {
       "es": {
         "title": "Desarrollo de Aplicaciones Web (UEA)",
-        "summary": "Repositorio de la materia de aplicaciones web — paralelo B, HTML/CSS/JS.",
-        "role": "Docente"
+        "summary": "Repositorio académico de aplicaciones web — HTML/CSS/JS (formación UEA).",
+        "role": "Egresado UEA / autor académico"
       },
       "en": {
         "title": "Web Application Development (UEA)",
-        "summary": "Web applications course repository — HTML/CSS/JS materials.",
-        "role": "Instructor"
+        "summary": "Academic web applications repository — HTML/CSS/JS materials (UEA coursework).",
+        "role": "UEA graduate / academic author"
       }
     },
     "tags": [
@@ -360,17 +360,17 @@
     "id": "poo",
     "repo": "elJohn72/PROGRAMACION-ORIENTADA-A-OBJETOS-A----UEA-L-UFB-030-A",
     "featured": false,
-    "category": "teaching",
+    "category": "edtech",
     "locales": {
       "es": {
         "title": "Programación Orientada a Objetos (UEA)",
-        "summary": "Material de POO para la UEA — Python y paradigmas orientados a objetos.",
-        "role": "Docente"
+        "summary": "Material académico de POO — Python y paradigmas orientados a objetos (formación UEA).",
+        "role": "Egresado UEA / autor académico"
       },
       "en": {
         "title": "Object-Oriented Programming (UEA)",
-        "summary": "OOP course materials for UEA — Python and object-oriented paradigms.",
-        "role": "Instructor"
+        "summary": "Academic OOP materials — Python and object-oriented paradigms (UEA coursework).",
+        "role": "UEA graduate / academic author"
       }
     },
     "tags": [

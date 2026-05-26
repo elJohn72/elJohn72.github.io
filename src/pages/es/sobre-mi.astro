@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SkillGrid from '../../components/SkillGrid.astro';
 import Timeline from '../../components/Timeline.astro';
+import DegreesBadges from '../../components/DegreesBadges.astro';
 import CredentialsSection from '../../components/CredentialsSection.astro';
 import ProductionSites from '../../components/ProductionSites.astro';
 import { getUi } from '../../i18n/ui';
@@ -9,9 +10,11 @@ import { profile } from '../../lib/data';
 
 const locale = 'es';
 const t = getUi(locale);
-const roleKeys = ['dentistry', 'teaching', 'entrepreneurship', 'robotics'] as const;
+const roleKeys = ['dentalHygiene', 'engineering', 'education', 'teaching', 'entrepreneurship', 'robotics'] as const;
 const roleTitles: Record<string, string> = {
-  dentistry: t.about.dentistry,
+  dentalHygiene: t.about.dentalHygiene,
+  engineering: t.about.engineering,
+  education: t.about.education,
   teaching: t.about.teaching,
   entrepreneurship: t.about.entrepreneurship,
   robotics: t.about.robotics,
@@ -32,7 +35,12 @@ const roleTitles: Record<string, string> = {
       <div>
         <p class="section-label">// perfil</p>
         <h1 class="section-title mt-2">{t.about.title}</h1>
-        <p class="mt-4 text-lg text-slate-300">{profile.bio.es}</p>
+        <p class="mt-3 font-mono text-sm text-cyan-400/90">{profile.title.es}</p>
+        <div class="mt-4">
+          <p class="mb-2 font-mono text-[10px] uppercase tracking-widest text-slate-500">{t.about.degrees}</p>
+          <DegreesBadges locale={locale} />
+        </div>
+        <p class="mt-4 text-lg leading-relaxed text-slate-300">{profile.bio.es}</p>
       </div>
     </div>
 

@@ -22,10 +22,15 @@ export interface CvFile {
   primary: boolean;
 }
 
+export interface Degree {
+  locales: Record<Locale, string>;
+}
+
 export interface Profile {
   name: string;
   email: string;
   photo: string;
+  degrees: Degree[];
   social: Record<string, string>;
   productionSites: ProductionSite[];
   credentials: Credential[];

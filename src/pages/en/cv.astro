@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Timeline from '../../components/Timeline.astro';
 import SkillGrid from '../../components/SkillGrid.astro';
 import CredentialsSection from '../../components/CredentialsSection.astro';
+import DegreesBadges from '../../components/DegreesBadges.astro';
 import { getUi } from '../../i18n/ui';
 import { profile, projects, socialLabels } from '../../lib/data';
 
@@ -33,6 +34,7 @@ const primaryCv = profile.cvFiles.find((f) => f.primary) ?? profile.cvFiles[0];
         <p class="section-label">// cv</p>
         <h1 class="mt-2 font-display text-4xl font-bold text-white">{profile.name}</h1>
         <p class="mt-2 font-mono text-sm text-cyan-400">{profile.title.en}</p>
+        <div class="mt-3"><DegreesBadges locale={locale} /></div>
         <p class="mt-4 text-slate-300">{profile.bio.en}</p>
         <p class="mt-3 font-mono text-xs text-slate-500">
           <a href={`mailto:${profile.email}`} class="text-cyan-400">{profile.email}</a>

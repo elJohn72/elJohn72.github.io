@@ -1,0 +1,16 @@
+---
+import type { Locale } from '../i18n/ui';
+import { profile } from '../lib/data';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<ul class="flex flex-wrap gap-2" aria-label={locale === 'es' ? 'Formación académica' : 'Academic degrees'}>
+  {profile.degrees.map((degree) => (
+    <li class="tech-badge text-[11px] normal-case tracking-normal">{degree.locales[locale]}</li>
+  ))}
+</ul>

@@ -2,6 +2,26 @@
   "name": "John Miraba",
   "email": "contacto@eljohn72.dev",
   "photo": "/images/profile.png",
+  "degrees": [
+    {
+      "locales": {
+        "es": "Higienista Dental",
+        "en": "Dental Hygienist"
+      }
+    },
+    {
+      "locales": {
+        "es": "Ing. Electromecánico",
+        "en": "Electromechanical Engineer"
+      }
+    },
+    {
+      "locales": {
+        "es": "Ing. en Tecnologías de la Información (OTI)",
+        "en": "Information Technology Engineer (IT)"
+      }
+    }
+  ],
   "social": {
     "github": "https://github.com/elJohn72",
     "linkedin": "https://www.linkedin.com/in/john-miraba/",
@@ -15,16 +35,16 @@
       "url": "https://ajtecnology.com",
       "label": "AJTecnology",
       "locales": {
-        "es": "Empresa de innovación, robótica, EdTech y soluciones tecnológicas.",
-        "en": "Innovation company for robotics, EdTech, and technology solutions."
+        "es": "Empresa de innovación: robótica, EdTech, IoT, automatización y desarrollo de software.",
+        "en": "Innovation company: robotics, EdTech, IoT, automation, and software development."
       }
     },
     {
       "url": "https://ajdent.site",
       "label": "AJ Dent",
       "locales": {
-        "es": "Sitio web profesional de odontología y servicios dentales.",
-        "en": "Professional dentistry and dental services website."
+        "es": "Marca digital en salud oral: higiene dental, prevención y presencia profesional en línea.",
+        "en": "Digital oral-health brand: dental hygiene, prevention, and professional online presence."
       }
     }
   ],
@@ -81,11 +101,11 @@
       "locales": {
         "es": {
           "title": "Certificado John Miraba",
-          "issuer": "Formación profesional"
+          "issuer": "Formación y desarrollo profesional"
         },
         "en": {
           "title": "John Miraba certificate",
-          "issuer": "Professional training"
+          "issuer": "Professional development"
         }
       }
     }
@@ -101,76 +121,95 @@
     }
   ],
   "title": {
-    "es": "Odontólogo · Docente · Emprendedor tecnológico",
-    "en": "Dentist · Educator · Tech entrepreneur"
+    "es": "Higienista Dental · Ing. Electromecánico · Ing. en TI (OTI)",
+    "en": "Dental Hygienist · Electromechanical Engineer · IT Engineer (OTI)"
   },
   "bio": {
-    "es": "Soy John Miraba, profesional multidisciplinar que conecta odontología, educación universitaria y emprendimiento en robótica, salud digital y sistemas sostenibles. Fundador de AJTecnology y AJ Dent, con experiencia docente en la Universidad Estatal Amazónica.",
-    "en": "I'm John Miraba, a multidisciplinary professional bridging dentistry, university teaching, and entrepreneurship in robotics, digital health, and sustainable systems. Founder of AJTecnology and AJ Dent, with teaching experience at Universidad Estatal Amazónica."
+    "es": "Soy John Miraba: higienista dental, ingeniero electromecánico e ingeniero en tecnologías de la información (OTI). Estudié en la Universidad Estatal Amazónica (UEA) y hoy soy docente en la Unidad Educativa Particular Andrés Bello. Integro salud oral, automatización, robótica y desarrollo de software en proyectos reales — AJTecnology, AJ Dent y sitios en producción como ajtecnology.com y ajdent.site.",
+    "en": "I'm John Miraba — dental hygienist, electromechanical engineer, and information technology engineer (OTI). I studied at Universidad Estatal Amazónica (UEA) and currently teach at Unidad Educativa Particular Andrés Bello. I combine oral health, automation, robotics, and software in real projects — AJTecnology, AJ Dent, and live sites including ajtecnology.com and ajdent.site."
   },
   "highlights": {
     "es": [
-      "Sitios en producción: ajtecnology.com y ajdent.site",
-      "Sistemas hidropónicos inteligentes (EcoGrow) — AJTecnology",
-      "Plataformas EdTech y automatización (AJT / AJENZA)",
-      "Docencia UEA: programación, POO, estructuras de datos y web"
+      "Higienista dental — prevención y salud oral (AJ Dent)",
+      "Ing. Electromecánico e Ing. en TI (OTI) — IoT, automatización y desarrollo",
+      "Egresado UEA · docente en Unidad Educativa Particular Andrés Bello",
+      "Fundador de AJTecnology / AJENZA — ajtecnology.com y ajdent.site"
     ],
     "en": [
-      "Live sites: ajtecnology.com and ajdent.site",
-      "Intelligent hydroponic systems (EcoGrow) — AJTecnology",
-      "EdTech platforms and automation (AJT / AJENZA)",
-      "UEA teaching: programming, OOP, data structures, and web"
+      "Dental hygienist — prevention and oral health (AJ Dent)",
+      "Electromechanical & IT engineer (OTI) — IoT, automation, and development",
+      "UEA graduate · teacher at Unidad Educativa Particular Andrés Bello",
+      "Founder of AJTecnology / AJENZA — ajtecnology.com and ajdent.site"
     ]
   },
   "skills": [
-    { "name": "Astro / TypeScript", "level": 85 },
-    { "name": "Python", "level": 90 },
-    { "name": "Robótica / G-code", "level": 80 },
-    { "name": "IoT / Automatización", "level": 82 },
-    { "name": "Docencia universitaria", "level": 95 },
-    { "name": "Odontología / Salud digital", "level": 88 }
+    { "name": "Higiene dental / Salud oral", "level": 92 },
+    { "name": "Ing. Electromecánico / IoT", "level": 88 },
+    { "name": "Ing. en TI (OTI) / Desarrollo", "level": 90 },
+    { "name": "Python / Automatización", "level": 90 },
+    { "name": "Robótica / Fabricación digital", "level": 82 },
+    { "name": "Docencia (Andrés Bello)", "level": 95 }
   ],
   "roles": {
-    "dentistry": {
-      "es": "Odontólogo y emprendedor en salud oral. AJ Dent (ajdent.site) como presencia digital profesional.",
-      "en": "Dentist and oral health entrepreneur. AJ Dent (ajdent.site) as a professional digital presence."
+    "dentalHygiene": {
+      "es": "Higienista dental enfocado en prevención, educación del paciente y promoción de la salud oral. Lidero la presencia digital de AJ Dent (ajdent.site) como extensión profesional de esa práctica.",
+      "en": "Dental hygienist focused on prevention, patient education, and oral health promotion. I lead AJ Dent's digital presence (ajdent.site) as a professional extension of that work."
+    },
+    "engineering": {
+      "es": "Ingeniero electromecánico e ingeniero en tecnologías de la información (OTI). Diseño e integro sensores, control, IoT, software y hardware — del taller al código y al producto final.",
+      "en": "Electromechanical engineer and information technology engineer (OTI). I design and integrate sensors, control, IoT, software, and hardware — from the shop floor to code and shipped product."
+    },
+    "education": {
+      "es": "Estudié en la Universidad Estatal Amazónica (UEA), donde cursé ingeniería y materias de programación, estructuras de datos, POO y desarrollo web. Los repositorios académicos en GitHub reflejan esa formación, no docencia universitaria.",
+      "en": "I studied at Universidad Estatal Amazónica (UEA), completing engineering coursework in programming, data structures, OOP, and web development. My academic GitHub repositories reflect that training, not university instruction."
     },
     "teaching": {
-      "es": "Docente en UEA — fundamentos de programación, POO, estructuras de datos y desarrollo de aplicaciones web.",
-      "en": "UEA instructor — programming fundamentals, OOP, data structures, and web application development."
+      "es": "Docente en la Unidad Educativa Particular Andrés Bello: enseñanza de fundamentos tecnológicos, programación y competencias digitales en educación secundaria.",
+      "en": "Teacher at Unidad Educativa Particular Andrés Bello: technology fundamentals, programming, and digital skills in secondary education."
     },
     "entrepreneurship": {
-      "es": "Fundador de AJTecnology (ajtecnology.com) y AJENZA; EcoGrow, EdTech y automatización operativa.",
-      "en": "Founder of AJTecnology (ajtecnology.com) and AJENZA; EcoGrow, EdTech, and operations automation."
+      "es": "Fundador de AJTecnology (ajtecnology.com) y ecosistema AJENZA. Desarrollo EcoGrow, plataformas EdTech, automatización y productos de impacto regional.",
+      "en": "Founder of AJTecnology (ajtecnology.com) and the AJENZA ecosystem. Building EcoGrow, EdTech platforms, automation, and products with regional impact."
     },
     "robotics": {
-      "es": "Cursos y certificaciones en robótica educativa, fabricación digital e integración hardware-software.",
-      "en": "Courses and certifications in educational robotics, digital fabrication, and hardware-software integration."
+      "es": "Robótica educativa y fabricación digital: cursos, certificaciones, G-code y prototipos que conectan mecánica, electrónica y programación.",
+      "en": "Educational robotics and digital fabrication: courses, certifications, G-code, and prototypes linking mechanics, electronics, and programming."
     }
   },
   "timeline": [
     {
       "year": "2024–2026",
-      "title": { "es": "Emprendimiento tecnológico", "en": "Tech entrepreneurship" },
+      "title": { "es": "Emprendimiento y productos digitales", "en": "Entrepreneurship & digital products" },
       "description": {
-        "es": "AJTecnology.com, AJ Dent, EcoGrow, SaludIA, SmartVest y plataformas AJENZA.",
-        "en": "AJTecnology.com, AJ Dent, EcoGrow, SaludIA, SmartVest, and AJENZA platforms."
+        "es": "AJTecnology.com, AJ Dent, EcoGrow, SaludIA, SmartVest y automatización AJENZA.",
+        "en": "AJTecnology.com, AJ Dent, EcoGrow, SaludIA, SmartVest, and AJENZA automation."
       }
     },
     {
-      "year": "2020–2026",
-      "title": { "es": "Docencia universitaria (UEA)", "en": "University teaching (UEA)" },
+      "year": "Actualidad",
+      "title": {
+        "es": "Docencia — Unidad Educativa Particular Andrés Bello",
+        "en": "Teaching — Unidad Educativa Particular Andrés Bello"
+      },
       "description": {
-        "es": "Materias de programación, POO, estructuras de datos y desarrollo web.",
-        "en": "Programming, OOP, data structures, and web development courses."
+        "es": "Docente en institución educativa particular: tecnología, programación y formación digital para estudiantes.",
+        "en": "Teacher at a private school: technology, programming, and digital literacy for students."
       }
     },
     {
-      "year": "—",
-      "title": { "es": "Odontología e innovación", "en": "Dentistry & innovation" },
+      "year": "Formación",
+      "title": { "es": "Estudios en la UEA", "en": "Studies at UEA" },
       "description": {
-        "es": "Práctica clínica y proyectos de salud digital orientados al paciente.",
-        "en": "Clinical practice and patient-oriented digital health projects."
+        "es": "Universidad Estatal Amazónica — ingeniería, TI (OTI) y materias de programación y desarrollo de software.",
+        "en": "Universidad Estatal Amazónica — engineering, IT (OTI), and programming/software development coursework."
+      }
+    },
+    {
+      "year": "Títulos",
+      "title": { "es": "Higiene dental e ingeniería", "en": "Dental hygiene & engineering" },
+      "description": {
+        "es": "Higienista dental · Ing. Electromecánico · Ing. en Tecnologías de la Información (OTI).",
+        "en": "Dental hygienist · Electromechanical engineer · Information technology engineer (OTI)."
       }
     }
   ]
