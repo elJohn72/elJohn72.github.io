@@ -13,8 +13,8 @@ const t = getUi(locale);
 
 const btnClass = (active: boolean) =>
   active
-    ? 'filter-btn filter-btn-active rounded-lg border px-4 py-2 text-sm transition'
-    : 'filter-btn filter-btn-inactive rounded-lg border px-4 py-2 text-sm transition';
+    ? 'filter-btn filter-btn-active rounded-lg border px-3 py-2 text-xs transition sm:px-4 sm:text-sm'
+    : 'filter-btn filter-btn-inactive rounded-lg border px-3 py-2 text-xs transition sm:px-4 sm:text-sm';
 ---
 
 <div class="flex flex-wrap gap-2" id="category-filters" role="tablist" aria-label="Project categories">

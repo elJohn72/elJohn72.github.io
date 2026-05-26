@@ -22,7 +22,7 @@ const canonical = new URL(pathname, Astro.site);
 <html lang={locale} class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#030712" />
@@ -52,7 +52,7 @@ const canonical = new URL(pathname, Astro.site);
       description: profile.bio[locale],
     })} />
   </head>
-  <body class="min-h-screen">
+  <body class="min-h-screen min-w-0">
     <a
       href="#main"
       class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:border focus:border-cyan-400 focus:bg-ink-900 focus:px-4 focus:py-2 focus:font-mono focus:text-cyan-300"
@@ -61,7 +61,7 @@ const canonical = new URL(pathname, Astro.site);
     </a>
     <TechBackground />
     <Header locale={locale} pathname={pathname} />
-    <main id="main" class="relative">
+    <main id="main" class="relative min-w-0">
       <slot />
     </main>
     <Footer locale={locale} />

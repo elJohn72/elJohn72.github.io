@@ -10,14 +10,14 @@ const t = getUi(locale);
 ---
 
 <BaseLayout locale={locale} title={t.contact.title} description={t.contact.subtitle} pathname={Astro.url.pathname}>
-  <div class="mx-auto max-w-3xl px-4 py-12 md:px-6 md:py-16">
+  <div class="page-shell-narrow">
     <p class="section-label">// contacto</p>
     <h1 class="section-title mt-2">{t.contact.title}</h1>
-    <p class="mt-4 text-lg text-slate-300">{t.contact.subtitle}</p>
+    <p class="mt-4 text-base leading-relaxed text-slate-300 sm:text-lg">{t.contact.subtitle}</p>
 
     <div class="card-surface mt-10">
       <h2 class="font-mono text-xs uppercase tracking-widest text-slate-500">{t.contact.email}</h2>
-      <a href={`mailto:${profile.email}`} class="mt-2 block font-mono text-xl text-cyan-400 hover:text-cyan-300">
+      <a href={`mailto:${profile.email}`} class="mt-2 block break-all font-mono text-base text-cyan-400 hover:text-cyan-300 sm:text-xl">
         {profile.email}
       </a>
     </div>

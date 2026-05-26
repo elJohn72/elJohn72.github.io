@@ -21,9 +21,9 @@ const { locale } = Astro.props;
         <span class="tech-badge border-emerald-500/40 bg-emerald-500/10 text-emerald-300">LIVE</span>
         <span class="font-mono text-xs text-slate-500 group-hover:text-cyan-400">↗</span>
       </div>
-      <h3 class="font-display text-xl font-bold text-white">{site.label}</h3>
-      <p class="mt-1 font-mono text-sm text-cyan-400/90">{site.url.replace('https://', '')}</p>
-      <p class="mt-3 text-sm text-slate-400">{site.locales[locale]}</p>
+      <h3 class="break-words font-display text-lg font-bold text-white sm:text-xl">{site.label}</h3>
+      <p class="mt-1 break-all font-mono text-xs text-cyan-400/90 sm:text-sm">{site.url.replace('https://', '')}</p>
+      <p class="mt-3 break-words text-sm leading-relaxed text-slate-400">{site.locales[locale]}</p>
     </a>
   ))}
 </div>

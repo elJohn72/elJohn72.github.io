@@ -5,8 +5,8 @@ import { profile } from '../lib/data';
 <div class="grid gap-4 sm:grid-cols-2">
   {profile.skills.map((skill) => (
     <div class="card-surface">
-      <div class="mb-2 flex justify-between font-mono text-xs">
-        <span class="text-slate-300">{skill.name}</span>
+      <div class="mb-2 flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
+        <span class="min-w-0 break-words text-slate-300">{skill.name}</span>
         <span class="text-cyan-400">{skill.level}%</span>
       </div>
       <div class="h-1.5 overflow-hidden rounded-full bg-slate-800">
