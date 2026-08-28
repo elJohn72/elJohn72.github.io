@@ -1,4 +1,5 @@
 import profileJson from '../data/profile.json';
+import cvJson from '../data/cv.json';
 import projectsJson from '../data/projects.json';
 import type { Locale } from '../i18n/ui';
 import type { MergedProject, ProjectCategory } from '../i18n/utils';
@@ -55,6 +56,79 @@ export const socialLabels: Record<string, Record<Locale, string>> = {
   tiktok: { es: 'TikTok', en: 'TikTok' },
   youtube: { es: 'YouTube', en: 'YouTube' },
 };
+
+export type L10n = Record<Locale, string>;
+
+export interface CvFacet {
+  id: string;
+  tag: string;
+  locales: Record<Locale, { label: string; blurb: string }>;
+}
+
+export interface CvMetric {
+  id: string;
+  value: number;
+  suffix: string;
+  facets: string[];
+  locales: Record<Locale, { label: string; note: string }>;
+}
+
+export interface CvExperience {
+  id: string;
+  role: L10n;
+  org: string;
+  place: string;
+  start: string;
+  end: L10n | string;
+  current: boolean;
+  facets: string[];
+  summary: L10n;
+  bullets: Record<Locale, string[]>;
+  stack: string[];
+}
+
+export interface CvEducation {
+  id: string;
+  degree: L10n;
+  school: L10n | string;
+  place: string;
+  period: L10n;
+  facets: string[];
+  note: L10n;
+}
+
+export interface CvGroup {
+  id: string;
+  facets: string[];
+  locales: L10n;
+  items: string[];
+}
+
+export interface CvProject {
+  id: string;
+  name: string;
+  facets: string[];
+  url: string | null;
+  repo: string | null;
+  locales: L10n;
+  stack: string[];
+}
+
+export interface Cv {
+  headline: L10n;
+  pitch: L10n;
+  location: L10n;
+  facets: CvFacet[];
+  metrics: CvMetric[];
+  experience: CvExperience[];
+  education: CvEducation[];
+  stackGroups: CvGroup[];
+  projects: CvProject[];
+  courseGroups: CvGroup[];
+  languages: { locales: L10n; level: L10n }[];
+}
+
+export const cv = cvJson as Cv;
 
 export const profile = profileJson as Profile;
 export const projects = projectsJson as MergedProject[];

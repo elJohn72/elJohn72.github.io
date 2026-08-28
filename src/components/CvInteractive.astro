@@ -1,0 +1,538 @@
+---
+import type { Locale } from '../i18n/ui';
+import { cv } from '../lib/data';
+
+interface Props {
+  locale: Locale;
+  labels: {
+    all: string;
+    filterHint: string;
+    search: string;
+    searchPlaceholder: string;
+    noResults: string;
+    experience: string;
+    projects: string;
+    stack: string;
+    education: string;
+    courses: string;
+    languages: string;
+    expand: string;
+    collapse: string;
+    expandAll: string;
+    collapseAll: string;
+    current: string;
+    shareFacet: string;
+    copied: string;
+    liveSite: string;
+    repo: string;
+    showing: string;
+  };
+}
+
+const { locale, labels } = Astro.props;
+const l = (v: any) => (typeof v === 'string' ? v : v?.[locale] ?? '');
+const facetIds = cv.facets.map((f) => f.id).join(' ');
+const blurbs: Record<string, string> = { all: cv.pitch[locale] };
+for (const f of cv.facets) blurbs[f.id] = f.locales[locale].blurb;
+---
+
+<div class="cv-app" data-cv-app>
+  <!-- ── Selector de perfil ─────────────────────────────────── -->
+  <section class="no-print mt-8" aria-labelledby="facet-heading">
+    <div class="flex flex-wrap items-baseline justify-between gap-2">
+      <h2 id="facet-heading" class="section-label">// {labels.filterHint}</h2>
+      <p class="font-mono text-[10px] text-slate-500" data-count-readout data-tpl={labels.showing}></p>
+    </div>
+    <div class="mt-3 flex flex-wrap gap-2" role="group" aria-label={labels.filterHint}>
+      <button type="button" class="cv-chip" data-facet="all" aria-pressed="true">
+        <span class="cv-chip-dot" aria-hidden="true"></span>{labels.all}
+      </button>
+      {cv.facets.map((f) => (
+        <button type="button" class="cv-chip" data-facet={f.id} aria-pressed="false">
+          <span class="cv-chip-dot" aria-hidden="true"></span>{f.locales[locale].label}
+        </button>
+      ))}
+    </div>
+
+    <div class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
+      <label class="relative flex-1">
+        <span class="sr-only">{labels.search}</span>
+        <svg class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" />
+        </svg>
+        <input
+          type="search"
+          data-cv-search
+          placeholder={labels.searchPlaceholder}
+          autocomplete="off"
+          class="min-h-11 w-full rounded-lg border border-slate-700 bg-ink-900/80 py-2.5 pl-10 pr-3 font-mono text-sm text-slate-200 placeholder:text-slate-600 focus:border-cyan-500/60 focus:outline-none focus:ring-1 focus:ring-cyan-500/40"
+        />
+      </label>
+      <div class="flex gap-2">
+        <button type="button" data-toggle-all class="btn-secondary !w-auto !px-4 !py-2 !text-xs" data-expand-label={labels.expandAll} data-collapse-label={labels.collapseAll}>
+          {labels.expandAll}
+        </button>
+        <button type="button" data-share-facet class="btn-secondary !w-auto !px-4 !py-2 !text-xs" data-copied-label={labels.copied}>
+          {labels.shareFacet}
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Enfoque activo ─────────────────────────────────────── -->
+  <p class="mt-6 rounded-lg border-l-2 border-cyan-500/60 bg-ink-900/50 px-4 py-3 text-sm leading-relaxed text-slate-300" data-facet-blurb>
+    {cv.pitch[locale]}
+  </p>
+
+  <!-- ── Métricas ───────────────────────────────────────────── -->
+  <section class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3" aria-label="KPI">
+    {cv.metrics.map((m) => (
+      <div class="cv-item card-surface !p-4" data-facets={m.facets.join(' ')} data-metric>
+        <p class="font-display text-2xl font-bold text-cyan-300 sm:text-3xl">
+          <span data-counter={m.value}>0</span>{m.suffix}
+        </p>
+        <p class="mt-1 text-xs font-medium leading-snug text-slate-300">{m.locales[locale].label}</p>
+        <p class="mt-1 font-mono text-[10px] leading-relaxed text-slate-500">{m.locales[locale].note}</p>
+      </div>
+    ))}
+  </section>
+
+  <!-- ── Experiencia ────────────────────────────────────────── -->
+  <section class="mt-12" data-section aria-labelledby="h-exp">
+    <h2 id="h-exp" class="cv-h2">{labels.experience}</h2>
+    <ol class="mt-5 space-y-3">
+      {cv.experience.map((x, i) => (
+        <li class="cv-item" data-facets={x.facets.join(' ')} data-search={`${l(x.role)} ${x.org} ${x.stack.join(' ')} ${x.summary[locale]}`}>
+          <article class="card-surface !p-0">
+            <button type="button" class="cv-acc-btn" aria-expanded={i === 0 ? 'true' : 'false'}>
+              <span class="min-w-0 flex-1 text-left">
+                <span class="flex flex-wrap items-center gap-2">
+                  <span class="font-display text-base font-bold text-white sm:text-lg">{l(x.role)}</span>
+                  {x.current && <span class="cv-live">{labels.current}</span>}
+                </span>
+                <span class="mt-0.5 block font-mono text-xs text-cyan-400">{x.org} · {x.place}</span>
+                <span class="mt-1 block text-sm leading-relaxed text-slate-400">{x.summary[locale]}</span>
+              </span>
+              <span class="flex shrink-0 flex-col items-end gap-2">
+                <span class="whitespace-nowrap font-mono text-[10px] uppercase tracking-widest text-slate-500">
+                  {x.start} — {l(x.end)}
+                </span>
+                <svg class="cv-caret h-4 w-4 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </span>
+            </button>
+            <div class="cv-acc-panel" hidden={i !== 0}>
+              <ul class="space-y-2 border-t border-slate-700/60 px-4 pb-4 pt-4 sm:px-6">
+                {x.bullets[locale].map((b) => (
+                  <li class="flex gap-2.5 text-sm leading-relaxed text-slate-300">
+                    <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-cyan-400" aria-hidden="true"></span>
+                    <span class="min-w-0">{b}</span>
+                  </li>
+                ))}
+              </ul>
+              <div class="flex flex-wrap gap-1.5 px-4 pb-4 sm:px-6">
+                {x.stack.map((s) => <span class="tech-tag">{s}</span>)}
+              </div>
+            </div>
+          </article>
+        </li>
+      ))}
+    </ol>
+    <p class="cv-empty" hidden>{labels.noResults}</p>
+  </section>
+
+  <!-- ── Proyectos ──────────────────────────────────────────── -->
+  <section class="mt-12" data-section aria-labelledby="h-proj">
+    <h2 id="h-proj" class="cv-h2">{labels.projects}</h2>
+    <div class="mt-5 grid gap-3 sm:grid-cols-2">
+      {cv.projects.map((p) => (
+        <article class="cv-item card-surface flex flex-col" data-facets={p.facets.join(' ')} data-search={`${p.name} ${p.stack.join(' ')} ${p.locales[locale]}`}>
+          <h3 class="font-display text-base font-bold text-white">{p.name}</h3>
+          <p class="mt-1.5 flex-1 text-sm leading-relaxed text-slate-400">{p.locales[locale]}</p>
+          <div class="mt-3 flex flex-wrap gap-1.5">
+            {p.stack.map((s) => <span class="tech-tag">{s}</span>)}
+          </div>
+          {(p.url || p.repo) && (
+            <div class="mt-3 flex flex-wrap gap-3 font-mono text-xs">
+              {p.url && <a href={p.url} target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300">{labels.liveSite} ↗</a>}
+              {p.repo && <a href={p.repo} target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">{labels.repo} ↗</a>}
+            </div>
+          )}
+        </article>
+      ))}
+    </div>
+    <p class="cv-empty" hidden>{labels.noResults}</p>
+  </section>
+
+  <!-- ── Stack ──────────────────────────────────────────────── -->
+  <section class="mt-12" data-section aria-labelledby="h-stack">
+    <h2 id="h-stack" class="cv-h2">{labels.stack}</h2>
+    <div class="mt-5 grid gap-3 sm:grid-cols-2">
+      {cv.stackGroups.map((g) => (
+        <div class="cv-item card-surface" data-facets={g.facets.join(' ')} data-search={`${g.locales[locale]} ${g.items.join(' ')}`}>
+          <h3 class="section-label">{g.locales[locale]}</h3>
+          <ul class="mt-2.5 flex flex-wrap gap-1.5">
+            {g.items.map((it) => <li class="tech-badge !normal-case !tracking-normal" data-term>{it}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <p class="cv-empty" hidden>{labels.noResults}</p>
+  </section>
+
+  <!-- ── Formación ──────────────────────────────────────────── -->
+  <section class="mt-12" data-section aria-labelledby="h-edu">
+    <h2 id="h-edu" class="cv-h2">{labels.education}</h2>
+    <ol class="mt-5 space-y-3">
+      {cv.education.map((e) => (
+        <li class="cv-item card-surface" data-facets={e.facets.join(' ')} data-search={`${l(e.degree)} ${l(e.school)} ${l(e.note)}`}>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+            <h3 class="font-display text-base font-bold text-white">{l(e.degree)}</h3>
+            <span class="whitespace-nowrap font-mono text-[10px] uppercase tracking-widest text-slate-500">{l(e.period)}</span>
+          </div>
+          <p class="mt-0.5 font-mono text-xs text-cyan-400">{l(e.school)} · {e.place}</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">{l(e.note)}</p>
+        </li>
+      ))}
+    </ol>
+    <p class="cv-empty" hidden>{labels.noResults}</p>
+  </section>
+
+  <!-- ── Cursos ─────────────────────────────────────────────── -->
+  <section class="mt-12" data-section aria-labelledby="h-courses">
+    <h2 id="h-courses" class="cv-h2">{labels.courses}</h2>
+    <div class="mt-5 grid gap-3 sm:grid-cols-2">
+      {cv.courseGroups.map((g) => (
+        <div class="cv-item card-surface" data-facets={g.facets.join(' ')} data-search={`${g.locales[locale]} ${g.items.join(' ')}`}>
+          <h3 class="section-label">{g.locales[locale]}</h3>
+          <ul class="mt-2.5 space-y-1.5">
+            {g.items.map((it) => (
+              <li class="flex gap-2 text-sm text-slate-400" data-term>
+                <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-violet-400/70" aria-hidden="true"></span>
+                <span class="min-w-0">{it}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <p class="cv-empty" hidden>{labels.noResults}</p>
+  </section>
+
+  <!-- ── Idiomas ────────────────────────────────────────────── -->
+  <section class="mt-12">
+    <h2 class="cv-h2">{labels.languages}</h2>
+    <ul class="mt-5 flex flex-wrap gap-3">
+      {cv.languages.map((lang) => (
+        <li class="card-surface !py-3">
+          <span class="font-display text-sm font-bold text-white">{lang.locales[locale]}</span>
+          <span class="ml-2 font-mono text-xs text-cyan-400">{lang.level[locale]}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+</div>
+
+<script type="application/json" id="cv-blurbs" set:html={JSON.stringify(blurbs)} is:inline></script>
+
+<style>
+  .cv-h2 {
+    @apply flex items-center gap-3 font-display text-lg font-bold text-white sm:text-xl;
+  }
+  .cv-h2::after {
+    content: '';
+    @apply h-px flex-1 bg-gradient-to-r from-cyan-500/40 to-transparent;
+  }
+
+  .cv-chip {
+    @apply inline-flex min-h-10 items-center gap-2 rounded-lg border border-slate-700 bg-ink-850 px-3.5 py-2 font-mono text-xs font-medium text-slate-400 transition hover:border-slate-500 hover:text-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400;
+  }
+  .cv-chip[aria-pressed='true'] {
+    @apply border-cyan-400/60 bg-cyan-500/15 text-cyan-300 shadow-glow;
+  }
+  .cv-chip-dot {
+    @apply h-1.5 w-1.5 rounded-full bg-slate-600 transition;
+  }
+  .cv-chip[aria-pressed='true'] .cv-chip-dot {
+    @apply bg-cyan-400 shadow-[0_0_6px_rgba(34,211,238,0.9)];
+  }
+
+  .cv-acc-btn {
+    @apply flex w-full items-start gap-4 p-4 text-left transition sm:p-6;
+  }
+  .cv-acc-btn:hover .cv-caret {
+    @apply text-cyan-400;
+  }
+  .cv-caret {
+    @apply transition-transform duration-200;
+  }
+  .cv-acc-btn[aria-expanded='true'] .cv-caret {
+    @apply rotate-180 text-cyan-400;
+  }
+
+  .cv-live {
+    @apply rounded border border-emerald-500/40 bg-emerald-500/10 px-1.5 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wider text-emerald-400;
+  }
+
+  .cv-item {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .cv-item[hidden] {
+    display: none !important;
+  }
+
+  .cv-empty {
+    @apply mt-4 rounded-lg border border-dashed border-slate-700 px-4 py-6 text-center font-mono text-xs text-slate-500;
+  }
+
+  :global(mark.cv-hit) {
+    @apply rounded bg-amber-400/25 px-0.5 text-amber-200;
+  }
+
+  @media print {
+    .cv-acc-panel[hidden] {
+      display: block !important;
+    }
+    .cv-caret,
+    .cv-chip-dot {
+      display: none !important;
+    }
+    .card-surface {
+      border-color: #cbd5e1 !important;
+      background: transparent !important;
+      break-inside: avoid;
+    }
+    .cv-h2,
+    .font-display {
+      color: #0f172a !important;
+    }
+    .cv-h2::after {
+      background: #cbd5e1 !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cv-item,
+    .cv-caret {
+      transition: none !important;
+    }
+  }
+</style>
+
+<script is:inline define:vars={{ facetIds }}>
+  (() => {
+    const root = document.querySelector('[data-cv-app]');
+    if (!root) return;
+
+    const VALID = new Set(['all', ...facetIds.split(' ')]);
+    const chips = [...root.querySelectorAll('[data-facet]')];
+    const items = [...root.querySelectorAll('.cv-item')];
+    const sections = [...root.querySelectorAll('[data-section]')];
+    const searchInput = root.querySelector('[data-cv-search]');
+    const blurb = root.querySelector('[data-facet-blurb]');
+    const readout = root.querySelector('[data-count-readout]');
+    const toggleAllBtn = root.querySelector('[data-toggle-all]');
+    const shareBtn = root.querySelector('[data-share-facet]');
+
+    const BLURBS = JSON.parse(document.getElementById('cv-blurbs').textContent);
+    const SHOWING = readout ? readout.dataset.tpl : '';
+
+    let facet = 'all';
+    let query = '';
+    const counters = [...root.querySelectorAll('[data-counter]')];
+    let observeCounters = () => {};
+
+    /* ── Filtrado ─────────────────────────────────────────── */
+    const norm = (s) =>
+      s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    function matches(el) {
+      const f = el.dataset.facets;
+      if (facet !== 'all' && f && !f.split(' ').includes(facet)) return false;
+      if (!query) return true;
+      const hay = norm(`${el.dataset.search || ''} ${el.textContent || ''}`);
+      return hay.includes(query);
+    }
+
+    function clearMarks(el) {
+      el.querySelectorAll('mark.cv-hit').forEach((m) => {
+        const p = m.parentNode;
+        p.replaceChild(document.createTextNode(m.textContent), m);
+        p.normalize();
+      });
+    }
+
+    function markTerms(el) {
+      if (!query) return;
+      el.querySelectorAll('[data-term]').forEach((node) => {
+        if (!norm(node.textContent || '').includes(query)) return;
+        const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
+        let tn;
+        while ((tn = walker.nextNode())) {
+          const i = norm(tn.nodeValue).indexOf(query);
+          if (i < 0) continue;
+          const range = document.createRange();
+          range.setStart(tn, i);
+          range.setEnd(tn, i + query.length);
+          const mark = document.createElement('mark');
+          mark.className = 'cv-hit';
+          try {
+            range.surroundContents(mark);
+          } catch (_) {
+            /* nodo partido: se ignora */
+          }
+          break;
+        }
+      });
+    }
+
+    function apply() {
+      let visible = 0;
+      items.forEach((el) => {
+        clearMarks(el);
+        const ok = matches(el);
+        el.hidden = !ok;
+        if (ok) {
+          visible++;
+          markTerms(el);
+        }
+      });
+
+      sections.forEach((s) => {
+        const any = [...s.querySelectorAll('.cv-item')].some((el) => !el.hidden);
+        const empty = s.querySelector('.cv-empty');
+        if (empty) empty.hidden = any;
+      });
+
+      if (readout) {
+        readout.textContent = SHOWING.replace('{n}', String(visible)).replace('{t}', String(items.length));
+      }
+      if (blurb) blurb.textContent = BLURBS[facet] || BLURBS.all;
+      observeCounters();
+    }
+
+    /* ── Chips + deep link ────────────────────────────────── */
+    function setFacet(next, push) {
+      facet = VALID.has(next) ? next : 'all';
+      chips.forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.facet === facet)));
+      apply();
+      if (push) {
+        const url = new URL(window.location.href);
+        if (facet === 'all') url.searchParams.delete('perfil');
+        else url.searchParams.set('perfil', facet);
+        history.replaceState(null, '', url);
+      }
+    }
+
+    chips.forEach((c) => c.addEventListener('click', () => setFacet(c.dataset.facet, true)));
+
+    /* ── Búsqueda ─────────────────────────────────────────── */
+    let timer;
+    searchInput?.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        query = norm(searchInput.value.trim());
+        apply();
+      }, 140);
+    });
+
+    /* ── Acordeones ───────────────────────────────────────── */
+    const accs = [...root.querySelectorAll('.cv-acc-btn')];
+    accs.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        btn.nextElementSibling.hidden = open;
+      });
+    });
+
+    toggleAllBtn?.addEventListener('click', () => {
+      const anyClosed = accs.some((b) => b.getAttribute('aria-expanded') === 'false');
+      accs.forEach((b) => {
+        b.setAttribute('aria-expanded', String(anyClosed));
+        b.nextElementSibling.hidden = !anyClosed;
+      });
+      toggleAllBtn.textContent = anyClosed
+        ? toggleAllBtn.dataset.collapseLabel
+        : toggleAllBtn.dataset.expandLabel;
+    });
+
+    /* ── Compartir el perfil filtrado ─────────────────────── */
+    shareBtn?.addEventListener('click', async () => {
+      const original = shareBtn.textContent;
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        shareBtn.textContent = shareBtn.dataset.copiedLabel;
+      } catch (_) {
+        shareBtn.textContent = window.location.href;
+      }
+      setTimeout(() => {
+        shareBtn.textContent = original;
+      }, 2000);
+    });
+
+    /* ── Contadores ───────────────────────────────────────── */
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function settle(el) {
+      if (el.dataset.done) return;
+      el.dataset.done = '1';
+      el.textContent = el.dataset.counter;
+    }
+
+    function animate(el) {
+      if (el.dataset.done) return;
+      el.dataset.done = '1';
+      const end = Number(el.dataset.counter);
+      const dur = 900;
+      const t0 = performance.now();
+      const step = (now) => {
+        const p = Math.min(1, (now - t0) / dur);
+        el.textContent = String(Math.round(end * (1 - Math.pow(1 - p, 3))));
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = String(end);
+      };
+      requestAnimationFrame(step);
+    }
+
+    if (reduce) {
+      counters.forEach(settle);
+    } else {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (!e.isIntersecting) return;
+            io.unobserve(e.target);
+            animate(e.target);
+          });
+        },
+        { rootMargin: '0px 0px -10% 0px' },
+      );
+      observeCounters = () => {
+        counters.forEach((c) => {
+          if (c.dataset.done) return;
+          const card = c.closest('.cv-item');
+          if (card && card.hidden) return;
+          io.observe(c);
+        });
+      };
+      observeCounters();
+      /* Red de seguridad: un contador visible nunca se queda en 0. */
+      setTimeout(() => {
+        counters.forEach((c) => {
+          const card = c.closest('.cv-item');
+          if (!card || !card.hidden) settle(c);
+        });
+      }, 1600);
+    }
+
+    /* ── Al imprimir, todo abierto ────────────────────────── */
+    window.addEventListener('beforeprint', () => {
+      accs.forEach((b) => (b.nextElementSibling.hidden = false));
+    });
+
+    /* ── Arranque: lee ?perfil= de la URL ─────────────────── */
+    setFacet(new URLSearchParams(window.location.search).get('perfil') || 'all', false);
+  })();
+</script>

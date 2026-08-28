@@ -1,0 +1,568 @@
+{
+  "headline": {
+    "es": "Desarrollador Full-Stack · IA aplicada a marketing y operaciones",
+    "en": "Full-Stack Developer · AI applied to marketing and operations"
+  },
+  "pitch": {
+    "es": "Construyo productos digitales de extremo a extremo y les integro inteligencia artificial: plataformas en producción, agentes LLM conectados por MCP a los sistemas reales del negocio (correo, CRM, WhatsApp, contabilidad, redes) y automatización del embudo de marketing hasta el cobro. Base en electromecánica y robótica, con docencia activa.",
+    "en": "I build digital products end to end and wire AI into them: production platforms, LLM agents connected through MCP to the real business systems (email, CRM, WhatsApp, accounting, social), and marketing-funnel automation all the way to checkout. Grounded in electromechanics and robotics, with active teaching."
+  },
+  "location": { "es": "Quinindé, Esmeraldas · Ecuador — trabajo remoto", "en": "Quinindé, Esmeraldas · Ecuador — remote-friendly" },
+  "facets": [
+    {
+      "id": "ia-marketing",
+      "tag": "ai",
+      "locales": {
+        "es": { "label": "IA & Marketing", "blurb": "Agentes LLM, MCP y automatización aplicados al embudo comercial: contenido, analítica de redes, SEO técnico y conversión a WhatsApp." },
+        "en": { "label": "AI & Marketing", "blurb": "LLM agents, MCP, and automation applied to the commercial funnel: content, social analytics, technical SEO, and WhatsApp conversion." }
+      }
+    },
+    {
+      "id": "fullstack",
+      "tag": "dev",
+      "locales": {
+        "es": { "label": "Full-Stack", "blurb": "Next.js, Node/Express, Prisma y PostgreSQL en producción: e-learning, SaaS clínico multi-tenant, pagos y despliegue continuo en Linux." },
+        "en": { "label": "Full-Stack", "blurb": "Next.js, Node/Express, Prisma, and PostgreSQL in production: e-learning, multi-tenant clinical SaaS, payments, and continuous deployment on Linux." }
+      }
+    },
+    {
+      "id": "robotica",
+      "tag": "iot",
+      "locales": {
+        "es": { "label": "Robótica & IoT", "blurb": "Arduino, ESP32, diseño de PCB e impresión 3D: del prototipo al producto y al aula." },
+        "en": { "label": "Robotics & IoT", "blurb": "Arduino, ESP32, PCB design, and 3D printing: from prototype to product and into the classroom." }
+      }
+    },
+    {
+      "id": "docencia",
+      "tag": "edu",
+      "locales": {
+        "es": { "label": "Docencia", "blurb": "Programas de robótica y tecnología en secundaria, más el diseño del currículo digital que los sostiene." },
+        "en": { "label": "Teaching", "blurb": "Robotics and technology programs in secondary school, plus the digital curriculum design behind them." }
+      }
+    },
+    {
+      "id": "electromecanica",
+      "tag": "ops",
+      "locales": {
+        "es": { "label": "Electromecánica", "blurb": "Mantenimiento industrial, control y automatización: siete años de planta antes del código." },
+        "en": { "label": "Electromechanics", "blurb": "Industrial maintenance, control, and automation: plant-floor years before the code." }
+      }
+    },
+    {
+      "id": "salud",
+      "tag": "health",
+      "locales": {
+        "es": { "label": "Salud oral", "blurb": "Higienista dental y cofundador de clínica: el dominio que originó el software clínico que desarrollo." },
+        "en": { "label": "Oral health", "blurb": "Dental hygienist and clinic co-founder: the domain that generated the clinical software I build." }
+      }
+    }
+  ],
+  "metrics": [
+    { "id": "anios", "value": 9, "suffix": "+", "facets": ["ia-marketing", "fullstack", "robotica", "docencia", "electromecanica", "salud"], "locales": { "es": { "label": "años de experiencia técnica", "note": "Desde 2017: planta industrial, aula y desarrollo." }, "en": { "label": "years of technical work", "note": "Since 2017: industrial plant, classroom, and development." } } },
+    { "id": "plataformas", "value": 2, "suffix": "", "facets": ["fullstack", "ia-marketing"], "locales": { "es": { "label": "plataformas propias en producción", "note": "E-learning AJTecnology y software clínico dental." }, "en": { "label": "own platforms in production", "note": "AJTecnology e-learning and dental clinical software." } } },
+    { "id": "agentes", "value": 20, "suffix": "+", "facets": ["ia-marketing", "fullstack"], "locales": { "es": { "label": "agentes de IA en operación", "note": "Sistema de gobernanza empresarial por dominios: finanzas, marketing, ventas, legal, sistemas." }, "en": { "label": "AI agents in operation", "note": "Business governance system by domain: finance, marketing, sales, legal, systems." } } },
+    { "id": "mcp", "value": 16, "suffix": "", "facets": ["ia-marketing", "fullstack"], "locales": { "es": { "label": "servidores MCP integrados", "note": "Gmail, Drive, Calendar, Odoo, SRI, WhatsApp, Slack, Notion, Meta, Search Console y más." }, "en": { "label": "MCP servers integrated", "note": "Gmail, Drive, Calendar, Odoo, SRI, WhatsApp, Slack, Notion, Meta, Search Console, and more." } } },
+    { "id": "comunidad", "value": 38, "suffix": "K+", "facets": ["ia-marketing"], "locales": { "es": { "label": "seguidores en la comunidad AJTecnology", "note": "Audiencia construida con contenido propio, medida con la API de Meta." }, "en": { "label": "followers in the AJTecnology community", "note": "Audience built with owned content, measured through the Meta API." } } },
+    { "id": "cursos", "value": 25, "suffix": "", "facets": ["ia-marketing", "fullstack", "robotica", "docencia", "electromecanica"], "locales": { "es": { "label": "cursos y capacitaciones certificadas", "note": "23 certificaciones Platzi más formación industrial presencial." }, "en": { "label": "certified courses and trainings", "note": "23 Platzi certifications plus in-person industrial training." } } }
+  ],
+  "experience": [
+    {
+      "id": "ajenza-ia",
+      "role": { "es": "Arquitecto de sistemas con IA", "en": "AI Systems Architect" },
+      "org": "AJENZA S.A.S.",
+      "place": "Quinindé, Ecuador",
+      "start": "2025",
+      "end": { "es": "presente", "en": "present" },
+      "current": true,
+      "facets": ["ia-marketing", "fullstack"],
+      "summary": {
+        "es": "Diseñé y opero el sistema de gobernanza empresarial de la compañía: agentes LLM especializados por dominio, conectados por MCP a los sistemas reales del negocio.",
+        "en": "I designed and operate the company's business governance system: domain-specialized LLM agents wired through MCP into the real business systems."
+      },
+      "bullets": {
+        "es": [
+          "Más de 20 agentes de IA con jurisdicción propia (marketing, ventas, finanzas, contabilidad regulatoria, legal, sistemas, ciberseguridad) y derivación automática entre ellos según el tema.",
+          "16 servidores MCP propios en Python/Node que dan a los agentes acceso controlado a Gmail, Drive, Calendar, Notion, Slack, Odoo, SRI, WhatsApp Cloud API, Meta Graph, Search Console y monitoreo de infraestructura.",
+          "Modelo de permisos por niveles (lectura → preview → escritura con confirmación → restringido) para que ninguna acción sensible —pagos, declaraciones, publicaciones— se ejecute sin aprobación humana.",
+          "Estándar de seguridad propio (OWASP + LOPDP Ecuador) con hooks anti-fuga que bloquean commits con secretos o datos personales, más revisión de código automatizada antes de fusionar."
+        ],
+        "en": [
+          "Over 20 AI agents with their own jurisdiction (marketing, sales, finance, regulatory accounting, legal, systems, security), with automatic hand-off between them by topic.",
+          "16 in-house MCP servers in Python/Node giving agents controlled access to Gmail, Drive, Calendar, Notion, Slack, Odoo, SRI, WhatsApp Cloud API, Meta Graph, Search Console, and infrastructure monitoring.",
+          "Tiered permission model (read → preview → write-with-confirmation → restricted) so no sensitive action — payments, tax filings, publishing — runs without human approval.",
+          "In-house security standard (OWASP + Ecuador's LOPDP) with anti-leak hooks that block commits carrying secrets or personal data, plus automated code review before merge."
+        ]
+      },
+      "stack": ["Python", "Node.js", "MCP", "LLM / Claude", "OAuth2", "PostgreSQL", "Docker"]
+    },
+    {
+      "id": "marketing-ia",
+      "role": { "es": "Desarrollador de automatización de marketing", "en": "Marketing Automation Developer" },
+      "org": "AJTecnology · AJDent",
+      "place": "Quinindé, Ecuador",
+      "start": "2023",
+      "end": { "es": "presente", "en": "present" },
+      "current": true,
+      "facets": ["ia-marketing"],
+      "summary": {
+        "es": "Construí la capa técnica del marketing de dos marcas: medición real de contenido, SEO, automatización del embudo y agentes que redactan y clasifican con criterio de negocio.",
+        "en": "I built the technical layer of marketing for two brands: real content measurement, SEO, funnel automation, and agents that write and triage with business judgment."
+      },
+      "bullets": {
+        "es": [
+          "Pipeline de analítica de contenido sobre Meta Graph API (Facebook e Instagram): ingesta de métricas por publicación, rendimiento por seguidor y detección del canal que realmente convierte, no el que más vanidad genera.",
+          "Embudo automatizado de redes y web a WhatsApp y de ahí al cobro en línea, con calificación de leads, ventana de servicio y respuestas sugeridas por IA sobre WhatsApp Cloud API.",
+          "Arquitectura SEO de 12 blogs con metadatos, Open Graph y estrategia de palabras clave; integración de Meta Pixel y CAPI para atribución.",
+          "Agentes de contenido y de ventas entrenados con el modelo de negocio real y un playbook de tono, que preparan borradores; la publicación siempre pasa por revisión humana.",
+          "Hallazgo medido y aplicado: publicar por API deprime el alcance frente a la publicación manual, así que el sistema asiste la producción pero no automatiza el posteo."
+        ],
+        "en": [
+          "Content analytics pipeline on the Meta Graph API (Facebook and Instagram): per-post metric ingestion, per-follower performance, and detection of the channel that actually converts rather than the one that looks best.",
+          "Automated funnel from social and web to WhatsApp and on to online checkout, with lead qualification, service-window handling, and AI-suggested replies over the WhatsApp Cloud API.",
+          "SEO architecture across 12 blogs with metadata, Open Graph, and keyword strategy; Meta Pixel and CAPI integration for attribution.",
+          "Content and sales agents trained on the real business model and a tone playbook, producing drafts; publishing always goes through human review.",
+          "Measured finding, since applied: posting through the API suppresses reach versus posting manually, so the system assists production but does not automate posting."
+        ]
+      },
+      "stack": ["Meta Graph API", "WhatsApp Cloud API", "SEO técnico", "Meta Pixel / CAPI", "Python", "LLM"]
+    },
+    {
+      "id": "fullstack-ajt",
+      "role": { "es": "Desarrollador Full-Stack", "en": "Full-Stack Developer" },
+      "org": "AJTecnology",
+      "place": "Quinindé, Ecuador",
+      "start": "2023",
+      "end": { "es": "presente", "en": "present" },
+      "current": true,
+      "facets": ["fullstack", "docencia"],
+      "summary": {
+        "es": "Desarrollo de extremo a extremo de AJT Learning Platform, la plataforma de e-learning en producción de la empresa.",
+        "en": "End-to-end development of AJT Learning Platform, the company's production e-learning platform."
+      },
+      "bullets": {
+        "es": [
+          "Next.js, Node/Express, Prisma y PostgreSQL sobre Docker, con despliegue continuo en servidores Linux (DigitalOcean).",
+          "Catálogo de cursos, matrícula por convenio institucional, roles múltiples por usuario (estudiante, instructor, coordinador, rector, administrador) y aislamiento entre instituciones.",
+          "Pasarela de pagos PayPal, módulo de soporte tipo ticket con folio, certificados verificables, laboratorios virtuales (Tinkercad) por módulo y comunidad con newsletter.",
+          "Auditorías de seguridad y de integridad de datos con corrección de fallos críticos en producción: pérdida de progreso al editar currículo, ordenamiento de lecciones, límites de tasa por IP y sesión persistente."
+        ],
+        "en": [
+          "Next.js, Node/Express, Prisma, and PostgreSQL on Docker, with continuous deployment to Linux servers (DigitalOcean).",
+          "Course catalog, institutional-agreement enrollment, multiple roles per user (student, instructor, coordinator, principal, admin), and isolation between institutions.",
+          "PayPal checkout, a ticket-based support module with reference numbers, verifiable certificates, per-module virtual labs (Tinkercad), and a community with newsletter.",
+          "Security and data-integrity audits with critical production fixes: progress loss on curriculum edits, lesson ordering, per-IP rate limits, and persistent sessions."
+        ]
+      },
+      "stack": ["Next.js", "React", "Node.js", "Express", "Prisma", "PostgreSQL", "Docker", "Linux", "PayPal"]
+    },
+    {
+      "id": "vinella",
+      "role": { "es": "Desarrollador de software clínico (SaaS)", "en": "Clinical Software Developer (SaaS)" },
+      "org": "Vinella · AJDent Platform",
+      "place": "Quinindé, Ecuador",
+      "start": "2025",
+      "end": { "es": "presente", "en": "present" },
+      "current": true,
+      "facets": ["fullstack", "salud"],
+      "summary": {
+        "es": "Software de gestión odontológica multi-tenant, construido desde el conocimiento clínico de mi propia consulta.",
+        "en": "Multi-tenant dental practice management software, built from the clinical knowledge of my own practice."
+      },
+      "bullets": {
+        "es": [
+          "Odontograma por cara dental, planes de tratamiento por fases, avance por pieza y módulo de ortodoncia con controles mes a mes.",
+          "Historia clínica alineada al Formulario 033 del Ministerio de Salud Pública del Ecuador y a la Ley Orgánica de Protección de Datos Personales.",
+          "Facturación, convenios, comisiones por profesional y panel administrativo; corrección de errores de dinero detectados en auditoría (doble cobro, convenios, comisiones).",
+          "Planes comerciales por suscripción, marca de producto separada de la clínica e infraestructura desplegada en droplets con Coolify."
+        ],
+        "en": [
+          "Per-surface odontogram, phased treatment plans, per-tooth progress, and an orthodontics module with month-by-month check-ups.",
+          "Clinical records aligned with Ecuador's Ministry of Health Form 033 and the national personal data protection law.",
+          "Billing, insurance agreements, per-practitioner commissions, and an admin panel; money bugs found in audit (double charging, agreements, commissions) fixed.",
+          "Subscription pricing tiers, product branding separated from the clinic, and infrastructure deployed on droplets with Coolify."
+        ]
+      },
+      "stack": ["Next.js", "Prisma", "PostgreSQL", "Coolify", "LOPDP", "Multi-tenant"]
+    },
+    {
+      "id": "fundador",
+      "role": { "es": "Fundador", "en": "Founder" },
+      "org": "AJTecnology (AJENZA S.A.S.)",
+      "place": "Quinindé, Ecuador",
+      "start": "2023",
+      "end": { "es": "presente", "en": "present" },
+      "current": true,
+      "facets": ["ia-marketing", "fullstack", "docencia", "robotica"],
+      "summary": {
+        "es": "Dirijo la estrategia y la ejecución de las iniciativas tecnológicas: educación en robótica, desarrollo a medida, impresión 3D y software propio.",
+        "en": "I lead strategy and execution across the technology initiatives: robotics education, custom development, 3D printing, and in-house software."
+      },
+      "bullets": {
+        "es": [
+          "Modelo de negocio con cursos en línea, clubes de robótica, convenios con instituciones educativas y desarrollo por proyecto.",
+          "Gestión de un equipo multidisciplinario y de las decisiones de producto, precio y prioridad con datos financieros y de operación reales.",
+          "Servicio de impresión 3D y prototipado con costeo por hora de máquina y consumo real de filamento medido.",
+          "Convenios con unidades educativas: currículo, capacitación docente y la plataforma que lo sostiene."
+        ],
+        "en": [
+          "Business model spanning online courses, robotics clubs, agreements with schools, and project-based development.",
+          "Managing a multidisciplinary team and product, pricing, and prioritization decisions from real financial and operational data.",
+          "3D printing and prototyping service with machine-hour costing and measured filament consumption.",
+          "Agreements with schools: curriculum, teacher training, and the platform that supports both."
+        ]
+      },
+      "stack": ["Estrategia de producto", "Gestión de equipo", "Impresión 3D", "Convenios educativos"]
+    },
+    {
+      "id": "docente-ab",
+      "role": { "es": "Profesor de Robótica", "en": "Robotics Teacher" },
+      "org": "U.E. Particular Andrés Bello",
+      "place": "Quinindé, Ecuador",
+      "start": "2023",
+      "end": { "es": "presente", "en": "present" },
+      "current": true,
+      "facets": ["docencia", "robotica"],
+      "summary": {
+        "es": "Diseño e imparto programas prácticos de robótica y automatización, de fundamentos de ingeniería a aplicaciones reales.",
+        "en": "I design and teach hands-on robotics and automation programs, from engineering fundamentals to real applications."
+      },
+      "bullets": {
+        "es": [
+          "Metodología por proyectos con Arduino y Tinkercad, con laboratorios virtuales enlazados a la plataforma de la empresa.",
+          "Currículo de robótica para Educación General Básica y Media, con material audiovisual propio y evaluación por evidencia.",
+          "Componente de emprendimiento e innovación para conectar la clase con el mercado laboral."
+        ],
+        "en": [
+          "Project-based methodology with Arduino and Tinkercad, with virtual labs linked to the company platform.",
+          "Robotics curriculum for basic and upper-secondary education, with in-house audiovisual material and evidence-based assessment.",
+          "Entrepreneurship and innovation component connecting the classroom to the job market."
+        ]
+      },
+      "stack": ["Arduino", "Tinkercad", "Diseño curricular", "Robótica educativa"]
+    },
+    {
+      "id": "ajdent",
+      "role": { "es": "Cofundador · Higienista Dental", "en": "Co-founder · Dental Hygienist" },
+      "org": "AJDent",
+      "place": "Quinindé, Ecuador",
+      "start": "2022",
+      "end": { "es": "presente", "en": "present" },
+      "current": true,
+      "facets": ["salud", "ia-marketing"],
+      "summary": {
+        "es": "Cofundé una clínica dental con enfoque en el paciente y apoyo tecnológico, y llevo su operación digital.",
+        "en": "I co-founded a patient-centered dental clinic with a technology backbone, and I run its digital operation."
+      },
+      "bullets": {
+        "es": [
+          "Cuidado oral preventivo: profilaxis y tratamiento periodontal, manejo de equipo y educación al paciente.",
+          "Digitalización de radiografías, registros de pacientes y agenda de citas; control financiero contra Odoo.",
+          "Marketing digital de la marca y captación de pacientes por redes y WhatsApp."
+        ],
+        "en": [
+          "Preventive oral care: prophylaxis and periodontal treatment, equipment handling, and patient education.",
+          "Digitized radiographs, patient records, and appointment scheduling; financial control against Odoo.",
+          "Brand digital marketing and patient acquisition through social media and WhatsApp."
+        ]
+      },
+      "stack": ["Salud oral", "Gestión clínica", "Odoo", "Marketing digital"]
+    },
+    {
+      "id": "enkador",
+      "role": { "es": "Técnico Electromecánico", "en": "Electromechanical Technician" },
+      "org": "Enkador S.A.",
+      "place": "Sangolquí, Ecuador",
+      "start": "2017",
+      "end": "2020",
+      "current": false,
+      "facets": ["electromecanica", "robotica"],
+      "summary": {
+        "es": "Mantenimiento eléctrico, de instrumentación y mecánico en las áreas de Resinas y Centro de Energía de una planta industrial.",
+        "en": "Electrical, instrumentation, and mechanical maintenance across the Resins and Power Center areas of an industrial plant."
+      },
+      "bullets": {
+        "es": [
+          "Inspección, diagnóstico de fallas y reparación de equipos y sistemas electromecánicos, con foco en reducir el tiempo de parada.",
+          "Mantenimiento preventivo, correctivo y predictivo bajo estándares de calidad y seguridad industrial.",
+          "Control industrial, instrumentación, neumática e hidráulica."
+        ],
+        "en": [
+          "Inspection, fault diagnosis, and repair of electromechanical equipment and systems, focused on reducing downtime.",
+          "Preventive, corrective, and predictive maintenance under industrial quality and safety standards.",
+          "Industrial control, instrumentation, pneumatics, and hydraulics."
+        ]
+      },
+      "stack": ["Control industrial", "Instrumentación", "Neumática", "Hidráulica", "Mantenimiento predictivo"]
+    }
+  ],
+  "education": [
+    {
+      "id": "uea",
+      "degree": { "es": "Ingeniería en Tecnologías de la Información", "en": "B.Eng. in Information Technology" },
+      "school": "Universidad Estatal Amazónica",
+      "place": "Puyo, Ecuador",
+      "period": { "es": "2024 — en curso", "en": "2024 — in progress" },
+      "facets": ["fullstack", "ia-marketing"],
+      "note": {
+        "es": "En curso. Materias cursadas con repositorio público: fundamentos de programación, POO, estructura de datos y desarrollo de aplicaciones web.",
+        "en": "In progress. Coursework with public repositories: programming fundamentals, OOP, data structures, and web application development."
+      }
+    },
+    {
+      "id": "sucre",
+      "degree": { "es": "Tecnología Superior en Electromecánica", "en": "Higher Technical Degree in Electromechanics" },
+      "school": "Instituto Tecnológico Superior Sucre",
+      "place": "Quito, Ecuador",
+      "period": { "es": "2014 — 2017", "en": "2014 — 2017" },
+      "facets": ["electromecanica", "robotica"],
+      "note": {
+        "es": "Título registrado en SENESCYT. Prácticas preprofesionales de 528 horas en China Motors (2017).",
+        "en": "Degree registered with SENESCYT. 528 hours of pre-professional practice at China Motors (2017)."
+      }
+    },
+    {
+      "id": "bachiller",
+      "degree": { "es": "Bachiller Técnico en Contabilidad y Administración", "en": "Technical Baccalaureate in Accounting and Administration" },
+      "school": "U.E. Fiscomisional \"Juan XXIII\"",
+      "place": "Quinindé, Ecuador",
+      "period": { "es": "Bachillerato", "en": "Secondary" },
+      "facets": ["electromecanica", "salud"],
+      "note": {
+        "es": "Base contable y administrativa que hoy uso en el control financiero de las unidades de negocio.",
+        "en": "Accounting and administration grounding I still use for the financial control of the business units."
+      }
+    },
+    {
+      "id": "higienista",
+      "degree": { "es": "Certificación en Higienista Dental", "en": "Dental Hygienist Certification" },
+      "school": { "es": "Formación profesional en salud oral", "en": "Professional training in oral health" },
+      "place": "Ecuador",
+      "period": { "es": "2023", "en": "2023" },
+      "facets": ["salud"],
+      "note": {
+        "es": "Habilitación para la práctica de higiene y prevención oral que ejerzo en AJDent.",
+        "en": "Qualification for the oral hygiene and prevention practice I perform at AJDent."
+      }
+    }
+  ],
+  "stackGroups": [
+    {
+      "id": "ia",
+      "facets": ["ia-marketing"],
+      "locales": { "es": "IA y automatización", "en": "AI & automation" },
+      "items": ["LLM / Claude", "MCP (Model Context Protocol)", "Agentes multiagente", "Prompt & context engineering", "OpenAI-compatible APIs", "Automatización de procesos"]
+    },
+    {
+      "id": "marketing",
+      "facets": ["ia-marketing"],
+      "locales": { "es": "Marketing técnico", "en": "Technical marketing" },
+      "items": ["Meta Graph API", "WhatsApp Cloud API", "Meta Pixel / CAPI", "Google Search Console", "SEO técnico", "Analítica de contenido", "WordPress / WooCommerce"]
+    },
+    {
+      "id": "front",
+      "facets": ["fullstack"],
+      "locales": { "es": "Frontend", "en": "Frontend" },
+      "items": ["JavaScript", "TypeScript", "React", "Next.js", "Astro", "Tailwind CSS", "HTML5 / CSS3"]
+    },
+    {
+      "id": "back",
+      "facets": ["fullstack"],
+      "locales": { "es": "Backend y datos", "en": "Backend & data" },
+      "items": ["Node.js", "Express", "Python", "C#", "REST APIs", "PostgreSQL", "Prisma", "MySQL"]
+    },
+    {
+      "id": "infra",
+      "facets": ["fullstack", "ia-marketing"],
+      "locales": { "es": "Infraestructura", "en": "Infrastructure" },
+      "items": ["Docker", "Linux", "DigitalOcean", "Coolify", "Git / GitHub", "GitHub Actions", "Nginx"]
+    },
+    {
+      "id": "seg",
+      "facets": ["fullstack", "salud"],
+      "locales": { "es": "Seguridad y cumplimiento", "en": "Security & compliance" },
+      "items": ["OWASP", "LOPDP (Ecuador)", "Formulario 033 MSP", "Auditoría de código", "Gestión de secretos", "Control de acceso por rol"]
+    },
+    {
+      "id": "hard",
+      "facets": ["robotica", "electromecanica"],
+      "locales": { "es": "Hardware y robótica", "en": "Hardware & robotics" },
+      "items": ["Arduino", "ESP32", "IoT", "KiCad", "EasyEDA", "Impresión 3D", "Tinkercad", "G-code"]
+    },
+    {
+      "id": "ind",
+      "facets": ["electromecanica"],
+      "locales": { "es": "Industrial", "en": "Industrial" },
+      "items": ["Control industrial", "Instrumentación", "Neumática", "Hidráulica", "Instalaciones eléctricas", "Mantenimiento predictivo"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "ajt-platform",
+      "name": "AJT Learning Platform",
+      "facets": ["fullstack", "docencia", "ia-marketing"],
+      "url": "https://ajtecnology.com",
+      "repo": null,
+      "locales": {
+        "es": "Plataforma de e-learning en producción: cursos, convenios institucionales, roles múltiples, pagos, certificados verificables y laboratorios virtuales.",
+        "en": "Production e-learning platform: courses, institutional agreements, multiple roles, payments, verifiable certificates, and virtual labs."
+      },
+      "stack": ["Next.js", "Express", "Prisma", "PostgreSQL", "Docker"]
+    },
+    {
+      "id": "vinella-proj",
+      "name": "Vinella · Software dental",
+      "facets": ["fullstack", "salud"],
+      "url": "https://ajdent.site",
+      "repo": null,
+      "locales": {
+        "es": "SaaS de gestión odontológica multi-tenant: odontograma por cara, planes de tratamiento, ortodoncia, facturación y cumplimiento LOPDP.",
+        "en": "Multi-tenant dental practice SaaS: per-surface odontogram, treatment plans, orthodontics, billing, and data-protection compliance."
+      },
+      "stack": ["Next.js", "Prisma", "PostgreSQL", "Coolify"]
+    },
+    {
+      "id": "ajenza-sistema",
+      "name": "Sistema de gobernanza AJENZA",
+      "facets": ["ia-marketing", "fullstack"],
+      "url": null,
+      "repo": null,
+      "locales": {
+        "es": "Más de 20 agentes LLM por dominio y 16 servidores MCP que conectan la IA con correo, CRM, WhatsApp, contabilidad, redes y monitoreo.",
+        "en": "Over 20 domain LLM agents and 16 MCP servers connecting AI to email, CRM, WhatsApp, accounting, social media, and monitoring."
+      },
+      "stack": ["Python", "Node.js", "MCP", "LLM", "OAuth2"]
+    },
+    {
+      "id": "ecogrow",
+      "name": "EcoGrow",
+      "facets": ["robotica", "fullstack"],
+      "url": null,
+      "repo": "https://github.com/elJohn72/proyecto_ecogrow",
+      "locales": {
+        "es": "Hidroponía inteligente: app web e IoT con sensores ESP32 para monitoreo de cultivos.",
+        "en": "Smart hydroponics: web app and IoT with ESP32 sensors for crop monitoring."
+      },
+      "stack": ["Python", "Flask", "ESP32", "MySQL"]
+    },
+    {
+      "id": "smartvest",
+      "name": "SmartVest",
+      "facets": ["robotica", "salud"],
+      "url": null,
+      "repo": "https://github.com/elJohn72/Smartvest",
+      "locales": {
+        "es": "Chaleco IoT de asistencia para personas no videntes: sensores, firmware y app de configuración.",
+        "en": "IoT assistive vest for blind users: sensors, firmware, and a configuration app."
+      },
+      "stack": ["React", "Vite", "Firmware", "Sensores"]
+    },
+    {
+      "id": "saludia",
+      "name": "SaludIA",
+      "facets": ["ia-marketing", "salud"],
+      "url": null,
+      "repo": "https://github.com/elJohn72/saludia-copago",
+      "locales": {
+        "es": "Estimador agéntico de copago y cobertura para pacientes asegurados, con LLM sobre reglas de póliza.",
+        "en": "Agentic copay and coverage estimator for insured patients, with an LLM over policy rules."
+      },
+      "stack": ["Python", "Streamlit", "LLM"]
+    },
+    {
+      "id": "robotica-repo",
+      "name": "Robótica",
+      "facets": ["robotica", "docencia"],
+      "url": null,
+      "repo": "https://github.com/elJohn72/Robotica",
+      "locales": {
+        "es": "Cursos y proyectos de Arduino: sensores, motores y automatización para el aula.",
+        "en": "Arduino courses and projects: sensors, motors, and automation for the classroom."
+      },
+      "stack": ["Arduino", "C++", "IoT", "G-code"]
+    }
+  ],
+  "courseGroups": [
+    {
+      "id": "c-ia-mkt",
+      "facets": ["ia-marketing"],
+      "locales": { "es": "Marketing digital e IA", "en": "Digital marketing & AI" },
+      "items": [
+        "Inteligencia Artificial para Content Marketing",
+        "Content Marketing",
+        "Content Marketing Avanzado",
+        "Introducción al Marketing Digital",
+        "Términos Básicos de Marketing Digital",
+        "Creación de Contenido de Marketing",
+        "Escritura Estratégica para Redes Sociales",
+        "Estrategia de marketing digital",
+        "Benchmarking",
+        "Marca Personal: Creación de tu Blog desde Cero",
+        "Creación de contenido y pauta en redes"
+      ]
+    },
+    {
+      "id": "c-dev",
+      "facets": ["fullstack"],
+      "locales": { "es": "Desarrollo de software", "en": "Software development" },
+      "items": [
+        "Fundamentos de Ingeniería de Software",
+        "Programación Básica",
+        "Pensamiento Lógico: Algoritmos y Diagramas de Flujo",
+        "Pensamiento Lógico: Funciones y Estructuras de Control",
+        "Pensamiento Lógico: Lenguajes de Programación",
+        "Configuración de Entorno de Desarrollo en macOS",
+        "Creación de Páginas Web",
+        "Introducción a la Web: Historia y Funcionamiento de Internet",
+        "Computación Básica"
+      ]
+    },
+    {
+      "id": "c-ecom",
+      "facets": ["ia-marketing", "fullstack"],
+      "locales": { "es": "E-commerce y web", "en": "E-commerce & web" },
+      "items": [
+        "Fundamentos de E-commerce",
+        "Creación de Tiendas en Línea con WooCommerce",
+        "Creación de Blogs con WordPress"
+      ]
+    },
+    {
+      "id": "c-elec",
+      "facets": ["robotica", "electromecanica"],
+      "locales": { "es": "Electrónica y electricidad", "en": "Electronics & electrical" },
+      "items": [
+        "Curso Básico de Circuitos Electrónicos",
+        "Fundamentos de Electricidad y Electrónica",
+        "Robótica, Arduino e IoT",
+        "Diseño de PCB (KiCad / EasyEDA)"
+      ]
+    },
+    {
+      "id": "c-ind",
+      "facets": ["electromecanica"],
+      "locales": { "es": "Industrial (presencial)", "en": "Industrial (in person)" },
+      "items": [
+        "Seguridad Industrial, Salud Ocupacional y Ambiente — Enkador (2018)",
+        "Nuevas Tecnologías XL y Montaje de Rodamientos — INA FAG (2018)",
+        "Instalaciones eléctricas industriales y residenciales",
+        "Control industrial y automatización",
+        "Mantenimiento preventivo, correctivo y predictivo",
+        "Instrumentación · Neumática e hidráulica"
+      ]
+    },
+    {
+      "id": "c-admin",
+      "facets": ["ia-marketing", "electromecanica"],
+      "locales": { "es": "Administración", "en": "Administration" },
+      "items": [
+        "Contabilidad y control administrativo",
+        "Uso avanzado de Excel y plantillas con IA"
+      ]
+    }
+  ],
+  "languages": [
+    { "locales": { "es": "Español", "en": "Spanish" }, "level": { "es": "Nativo", "en": "Native" } },
+    { "locales": { "es": "Inglés", "en": "English" }, "level": { "es": "B1 certificado", "en": "Certified B1" } }
+  ]
+}

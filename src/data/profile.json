@@ -5,20 +5,26 @@
   "degrees": [
     {
       "locales": {
+        "es": "Desarrollador Full-Stack",
+        "en": "Full-Stack Developer"
+      }
+    },
+    {
+      "locales": {
+        "es": "Electromecánico",
+        "en": "Electromechanical Technologist"
+      }
+    },
+    {
+      "locales": {
+        "es": "Ing. en TI (en curso, UEA)",
+        "en": "IT Engineering (in progress, UEA)"
+      }
+    },
+    {
+      "locales": {
         "es": "Higienista Dental",
         "en": "Dental Hygienist"
-      }
-    },
-    {
-      "locales": {
-        "es": "Ing. Electromecánico",
-        "en": "Electromechanical Engineer"
-      }
-    },
-    {
-      "locales": {
-        "es": "Ing. en Tecnologías de la Información (OTI)",
-        "en": "Information Technology Engineer (IT)"
       }
     }
   ],
@@ -112,43 +118,69 @@
   ],
   "cvFiles": [
     {
-      "file": "/cv/hoja-de-vida-john-miraba.pdf",
+      "file": "/cv/hoja-de-vida-john-miraba-2026.pdf",
       "locales": {
-        "es": "Hoja de vida — John Miraba",
-        "en": "Resume — John Miraba"
+        "es": "Hoja de vida 2026 — John Miraba",
+        "en": "Resume 2026 — John Miraba"
       },
       "primary": true
     }
   ],
   "title": {
-    "es": "Higienista Dental · Ing. Electromecánico · Ing. en TI (OTI)",
-    "en": "Dental Hygienist · Electromechanical Engineer · IT Engineer (OTI)"
+    "es": "Desarrollador Full-Stack · IA aplicada a marketing y operaciones",
+    "en": "Full-Stack Developer · AI applied to marketing and operations"
   },
   "bio": {
-    "es": "Soy John Miraba: higienista dental, ingeniero electromecánico e ingeniero en tecnologías de la información (OTI). Estudié en la Universidad Estatal Amazónica (UEA) y hoy soy docente en la Unidad Educativa Particular Andrés Bello. Integro salud oral, automatización, robótica y desarrollo de software en proyectos reales — AJTecnology, AJ Dent y sitios en producción como ajtecnology.com y ajdent.site.",
-    "en": "I'm John Miraba — dental hygienist, electromechanical engineer, and information technology engineer (OTI). I studied at Universidad Estatal Amazónica (UEA) and currently teach at Unidad Educativa Particular Andrés Bello. I combine oral health, automation, robotics, and software in real projects — AJTecnology, AJ Dent, and live sites including ajtecnology.com and ajdent.site."
+    "es": "Soy John Miraba. Construyo productos digitales de extremo a extremo y les integro inteligencia artificial: plataformas en producción, agentes LLM conectados por MCP a los sistemas reales del negocio y automatización del embudo de marketing hasta el cobro. Fundador de AJTecnology y cofundador de AJDent, con base en electromecánica y robótica, docencia activa en la U.E. Andrés Bello y estudios de Ingeniería en TI en la Universidad Estatal Amazónica.",
+    "en": "I'm John Miraba. I build digital products end to end and wire AI into them: production platforms, LLM agents connected through MCP to the real business systems, and marketing-funnel automation all the way to checkout. Founder of AJTecnology and co-founder of AJDent, grounded in electromechanics and robotics, teaching at U.E. Andrés Bello, and studying IT Engineering at Universidad Estatal Amazónica."
   },
   "highlights": {
     "es": [
-      "Higienista dental — prevención y salud oral (AJ Dent)",
-      "Ing. Electromecánico e Ing. en TI (OTI) — IoT, automatización y desarrollo",
-      "Egresado UEA · docente en Unidad Educativa Particular Andrés Bello",
-      "Fundador de AJTecnology / AJENZA — ajtecnology.com y ajdent.site"
+      "IA aplicada: +20 agentes LLM y 16 servidores MCP integrados a correo, CRM, WhatsApp, contabilidad y redes",
+      "Full-Stack: dos plataformas propias en producción (e-learning y software clínico dental)",
+      "Marketing técnico: Meta Graph API, WhatsApp Cloud API, SEO y embudo automatizado hasta el cobro",
+      "Robótica, IoT y electromecánica — del taller al código, con docencia en la U.E. Andrés Bello"
     ],
     "en": [
-      "Dental hygienist — prevention and oral health (AJ Dent)",
-      "Electromechanical & IT engineer (OTI) — IoT, automation, and development",
-      "UEA graduate · teacher at Unidad Educativa Particular Andrés Bello",
-      "Founder of AJTecnology / AJENZA — ajtecnology.com and ajdent.site"
+      "Applied AI: 20+ LLM agents and 16 MCP servers wired into email, CRM, WhatsApp, accounting, and social",
+      "Full-Stack: two in-house platforms in production (e-learning and dental clinical software)",
+      "Technical marketing: Meta Graph API, WhatsApp Cloud API, SEO, and an automated funnel through checkout",
+      "Robotics, IoT, and electromechanics — from the shop floor to code, teaching at U.E. Andrés Bello"
     ]
   },
   "skills": [
-    { "name": "Higiene dental / Salud oral", "level": 92 },
-    { "name": "Ing. Electromecánico / IoT", "level": 88 },
-    { "name": "Ing. en TI (OTI) / Desarrollo", "level": 90 },
-    { "name": "Python / Automatización", "level": 90 },
-    { "name": "Robótica / Fabricación digital", "level": 82 },
-    { "name": "Docencia (Andrés Bello)", "level": 95 }
+    {
+      "name": "IA aplicada / Agentes LLM / MCP",
+      "level": 92
+    },
+    {
+      "name": "Full-Stack (Next.js · Node · Prisma)",
+      "level": 90
+    },
+    {
+      "name": "Marketing técnico / SEO / Meta API",
+      "level": 88
+    },
+    {
+      "name": "Python / Automatización",
+      "level": 90
+    },
+    {
+      "name": "Robótica · IoT · Fabricación digital",
+      "level": 82
+    },
+    {
+      "name": "Electromecánica industrial",
+      "level": 85
+    },
+    {
+      "name": "Docencia (Andrés Bello)",
+      "level": 95
+    },
+    {
+      "name": "Higiene dental / Salud oral",
+      "level": 92
+    }
   ],
   "roles": {
     "dentalHygiene": {
@@ -156,60 +188,95 @@
       "en": "Dental hygienist focused on prevention, patient education, and oral health promotion. I lead AJ Dent's digital presence (ajdent.site) as a professional extension of that work."
     },
     "engineering": {
-      "es": "Ingeniero electromecánico e ingeniero en tecnologías de la información (OTI). Diseño e integro sensores, control, IoT, software y hardware — del taller al código y al producto final.",
-      "en": "Electromechanical engineer and information technology engineer (OTI). I design and integrate sensors, control, IoT, software, and hardware — from the shop floor to code and shipped product."
+      "es": "Electromecánico de formación (I.T.S. Sucre) y estudiante de Ingeniería en Tecnologías de la Información en la UEA. Diseño e integro sensores, control, IoT, software y hardware — del taller al código y al producto final.",
+      "en": "Trained electromechanical technologist (I.T.S. Sucre) and IT Engineering student at UEA. I design and integrate sensors, control, IoT, software, and hardware — from the shop floor to code and shipped product."
     },
     "education": {
-      "es": "Estudié en la Universidad Estatal Amazónica (UEA), donde cursé ingeniería y materias de programación, estructuras de datos, POO y desarrollo web. Los repositorios académicos en GitHub reflejan esa formación, no docencia universitaria.",
-      "en": "I studied at Universidad Estatal Amazónica (UEA), completing engineering coursework in programming, data structures, OOP, and web development. My academic GitHub repositories reflect that training, not university instruction."
+      "es": "Curso Ingeniería en Tecnologías de la Información en la Universidad Estatal Amazónica (UEA) desde 2024: programación, estructuras de datos, POO y desarrollo web. Los repositorios académicos en GitHub reflejan esa formación en curso.",
+      "en": "I've been studying IT Engineering at Universidad Estatal Amazónica (UEA) since 2024: programming, data structures, OOP, and web development. My academic GitHub repositories reflect that ongoing coursework."
     },
     "teaching": {
       "es": "Docente en la Unidad Educativa Particular Andrés Bello: enseñanza de fundamentos tecnológicos, programación y competencias digitales en educación secundaria.",
       "en": "Teacher at Unidad Educativa Particular Andrés Bello: technology fundamentals, programming, and digital skills in secondary education."
     },
     "entrepreneurship": {
-      "es": "Fundador de AJTecnology (ajtecnology.com) y ecosistema AJENZA. Desarrollo EcoGrow, plataformas EdTech, automatización y productos de impacto regional.",
-      "en": "Founder of AJTecnology (ajtecnology.com) and the AJENZA ecosystem. Building EcoGrow, EdTech platforms, automation, and products with regional impact."
+      "es": "Fundador de AJTecnology (ajtecnology.com) y del ecosistema AJENZA: educación en robótica, desarrollo a medida, impresión 3D y software propio, con convenios con unidades educativas.",
+      "en": "Founder of AJTecnology (ajtecnology.com) and the AJENZA ecosystem: robotics education, custom development, 3D printing, and in-house software, with agreements with schools."
     },
     "robotics": {
       "es": "Robótica educativa y fabricación digital: cursos, certificaciones, G-code y prototipos que conectan mecánica, electrónica y programación.",
       "en": "Educational robotics and digital fabrication: courses, certifications, G-code, and prototypes linking mechanics, electronics, and programming."
+    },
+    "ai": {
+      "es": "Integro modelos LLM en el negocio real: agentes por dominio conectados vía MCP a correo, CRM, WhatsApp, contabilidad y redes, con permisos por niveles para que nada sensible se ejecute sin aprobación humana.",
+      "en": "I embed LLM models into the real business: domain agents connected through MCP to email, CRM, WhatsApp, accounting, and social, with tiered permissions so nothing sensitive runs without human approval."
     }
   },
   "timeline": [
     {
-      "year": "2024–2026",
-      "title": { "es": "Emprendimiento y productos digitales", "en": "Entrepreneurship & digital products" },
+      "year": "2025 — presente",
+      "title": {
+        "es": "IA aplicada al negocio — AJENZA",
+        "en": "Applied AI for business — AJENZA"
+      },
       "description": {
-        "es": "AJTecnology.com, AJ Dent, EcoGrow, SaludIA, SmartVest y automatización AJENZA.",
-        "en": "AJTecnology.com, AJ Dent, EcoGrow, SaludIA, SmartVest, and AJENZA automation."
+        "es": "Sistema de gobernanza con +20 agentes LLM por dominio y 16 servidores MCP conectados a Gmail, Drive, Odoo, SRI, WhatsApp, Meta y Search Console, con permisos por niveles y aprobación humana.",
+        "en": "Governance system with 20+ domain LLM agents and 16 MCP servers connected to Gmail, Drive, Odoo, SRI, WhatsApp, Meta, and Search Console, with tiered permissions and human approval."
       }
     },
     {
-      "year": "Actualidad",
+      "year": "2023 — presente",
       "title": {
-        "es": "Docencia — Unidad Educativa Particular Andrés Bello",
-        "en": "Teaching — Unidad Educativa Particular Andrés Bello"
+        "es": "Plataformas propias en producción",
+        "en": "In-house platforms in production"
       },
       "description": {
-        "es": "Docente en institución educativa particular: tecnología, programación y formación digital para estudiantes.",
-        "en": "Teacher at a private school: technology, programming, and digital literacy for students."
+        "es": "AJT Learning Platform (Next.js, Express, Prisma, PostgreSQL) y Vinella, software de gestión odontológica multi-tenant con cumplimiento LOPDP y Formulario 033.",
+        "en": "AJT Learning Platform (Next.js, Express, Prisma, PostgreSQL) and Vinella, multi-tenant dental practice software with data-protection and Form 033 compliance."
+      }
+    },
+    {
+      "year": "2023 — presente",
+      "title": {
+        "es": "Docencia — U.E. Particular Andrés Bello",
+        "en": "Teaching — U.E. Particular Andrés Bello"
+      },
+      "description": {
+        "es": "Profesor de robótica: currículo por proyectos con Arduino y Tinkercad, con laboratorios virtuales enlazados a la plataforma.",
+        "en": "Robotics teacher: project-based curriculum with Arduino and Tinkercad, with virtual labs linked to the platform."
+      }
+    },
+    {
+      "year": "2022 — presente",
+      "title": {
+        "es": "Cofundador — AJDent",
+        "en": "Co-founder — AJDent"
+      },
+      "description": {
+        "es": "Clínica dental con operación digitalizada: radiografías, historia clínica, agenda y captación de pacientes por redes y WhatsApp.",
+        "en": "Dental clinic with a digitized operation: radiographs, clinical records, scheduling, and patient acquisition via social media and WhatsApp."
+      }
+    },
+    {
+      "year": "2017 — 2020",
+      "title": {
+        "es": "Técnico Electromecánico — Enkador S.A.",
+        "en": "Electromechanical Technician — Enkador S.A."
+      },
+      "description": {
+        "es": "Mantenimiento eléctrico, de instrumentación y mecánico en Resinas y Centro de Energía: control industrial, neumática, hidráulica y mantenimiento predictivo.",
+        "en": "Electrical, instrumentation, and mechanical maintenance in Resins and Power Center: industrial control, pneumatics, hydraulics, and predictive maintenance."
       }
     },
     {
       "year": "Formación",
-      "title": { "es": "Estudios en la UEA", "en": "Studies at UEA" },
+      "title": {
+        "es": "Electromecánica y TI",
+        "en": "Electromechanics & IT"
+      },
       "description": {
-        "es": "Universidad Estatal Amazónica — ingeniería, TI (OTI) y materias de programación y desarrollo de software.",
-        "en": "Universidad Estatal Amazónica — engineering, IT (OTI), and programming/software development coursework."
-      }
-    },
-    {
-      "year": "Títulos",
-      "title": { "es": "Higiene dental e ingeniería", "en": "Dental hygiene & engineering" },
-      "description": {
-        "es": "Higienista dental · Ing. Electromecánico · Ing. en Tecnologías de la Información (OTI).",
-        "en": "Dental hygienist · Electromechanical engineer · Information technology engineer (OTI)."
+        "es": "Tecnología Superior en Electromecánica (I.T.S. Sucre, 2014–2017) e Ingeniería en Tecnologías de la Información en curso (Universidad Estatal Amazónica, desde 2024).",
+        "en": "Higher Technical Degree in Electromechanics (I.T.S. Sucre, 2014–2017) and IT Engineering in progress (Universidad Estatal Amazónica, since 2024)."
       }
     }
   ]
