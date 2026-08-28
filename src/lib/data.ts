@@ -104,9 +104,14 @@ export interface CvGroup {
   items: string[];
 }
 
+export type CvProjectStatus = 'produccion' | 'desarrollo' | 'validacion' | 'publico' | 'programa';
+
 export interface CvProject {
   id: string;
   name: string;
+  status: CvProjectStatus;
+  year: string;
+  role: L10n;
   facets: string[];
   url: string | null;
   repo: string | null;
@@ -124,6 +129,8 @@ export interface Cv {
   education: CvEducation[];
   stackGroups: CvGroup[];
   projects: CvProject[];
+  projectStatus: Record<string, L10n>;
+  whatsapp: { label: string; url: string };
   courseGroups: CvGroup[];
   languages: { locales: L10n; level: L10n }[];
 }

@@ -142,21 +142,42 @@ for (const f of cv.facets) blurbs[f.id] = f.locales[locale].blurb;
     <p class="cv-empty" hidden>{labels.noResults}</p>
   </section>
 
-  <!-- ── Proyectos ──────────────────────────────────────────── -->
+  <!-- ── Portafolio ─────────────────────────────────────────── -->
   <section class="mt-12" data-section aria-labelledby="h-proj">
     <h2 id="h-proj" class="cv-h2">{labels.projects}</h2>
-    <div class="mt-5 grid gap-3 sm:grid-cols-2">
+    <div class="mt-5 grid gap-3 md:grid-cols-2">
       {cv.projects.map((p) => (
-        <article class="cv-item card-surface flex flex-col" data-facets={p.facets.join(' ')} data-search={`${p.name} ${p.stack.join(' ')} ${p.locales[locale]}`}>
-          <h3 class="font-display text-base font-bold text-white">{p.name}</h3>
-          <p class="mt-1.5 flex-1 text-sm leading-relaxed text-slate-400">{p.locales[locale]}</p>
+        <article
+          class="cv-item card-surface flex flex-col"
+          data-facets={p.facets.join(' ')}
+          data-search={`${p.name} ${p.stack.join(' ')} ${p.locales[locale]} ${l(p.role)}`}
+        >
+          <div class="flex flex-wrap items-start justify-between gap-x-3 gap-y-1.5">
+            <h3 class="min-w-0 font-display text-base font-bold text-white">{p.name}</h3>
+            <span class={`cv-status cv-status--${p.status}`}>{cv.projectStatus[p.status][locale]}</span>
+          </div>
+          <p class="mt-1 font-mono text-[10px] uppercase tracking-widest text-slate-500">
+            {p.year} · {l(p.role)}
+          </p>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-400">{p.locales[locale]}</p>
           <div class="mt-3 flex flex-wrap gap-1.5">
-            {p.stack.map((s) => <span class="tech-tag">{s}</span>)}
+            {p.stack.map((st) => <span class="tech-tag" data-term>{st}</span>)}
           </div>
           {(p.url || p.repo) && (
-            <div class="mt-3 flex flex-wrap gap-3 font-mono text-xs">
-              {p.url && <a href={p.url} target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300">{labels.liveSite} ↗</a>}
-              {p.repo && <a href={p.repo} target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">{labels.repo} ↗</a>}
+            <div class="mt-3 flex flex-wrap gap-4 border-t border-slate-700/50 pt-3 font-mono text-xs">
+              {p.url && (
+                <a href={p.url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300">
+                  <span class="status-dot !h-1.5 !w-1.5" aria-hidden="true"></span>{labels.liveSite}
+                </a>
+              )}
+              {p.repo && (
+                <a href={p.repo} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
+                  </svg>
+                  {labels.repo}
+                </a>
+              )}
             </div>
           )}
         </article>
@@ -270,6 +291,15 @@ for (const f of cv.facets) blurbs[f.id] = f.locales[locale].blurb;
   .cv-acc-btn[aria-expanded='true'] .cv-caret {
     @apply rotate-180 text-cyan-400;
   }
+
+  .cv-status {
+    @apply shrink-0 whitespace-nowrap rounded border px-1.5 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wider;
+  }
+  .cv-status--produccion { @apply border-emerald-500/40 bg-emerald-500/10 text-emerald-400; }
+  .cv-status--desarrollo { @apply border-cyan-500/40 bg-cyan-500/10 text-cyan-300; }
+  .cv-status--validacion { @apply border-amber-500/40 bg-amber-500/10 text-amber-400; }
+  .cv-status--publico    { @apply border-violet-500/40 bg-violet-500/10 text-violet-300; }
+  .cv-status--programa   { @apply border-slate-500/50 bg-slate-500/10 text-slate-300; }
 
   .cv-live {
     @apply rounded border border-emerald-500/40 bg-emerald-500/10 px-1.5 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wider text-emerald-400;
